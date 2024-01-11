@@ -27,6 +27,4 @@ func player_movement(delta):
 		velocity += (input * accel * delta)
 		velocity = velocity.limit_length(max_speed)
 	move_and_slide()	
-func mario_shoot():
-		if Input.is_action_pressed("ui_j"):
-			#need to finish
+

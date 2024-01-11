@@ -73,7 +73,7 @@ animations = [{
 "speed": 9.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="Game1Mario" type="Node2D"]
 script = ExtResource("1_xqpd2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -86,7 +86,6 @@ expand_mode = 1
 
 [node name="Mario" type="CharacterBody2D" parent="."]
 script = ExtResource("3_nq448")
-yes = null
 
 [node name="Sprite2D" type="Sprite2D" parent="Mario"]
 position = Vector2(380.75, 539.333)
