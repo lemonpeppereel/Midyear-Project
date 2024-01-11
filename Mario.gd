@@ -3,8 +3,8 @@ extends CharacterBody2D
 @export var yes  = 1 
 
 const max_speed = 400
-const accel = 1500
-const friction = 200
+const accel = 1000
+const friction = 100
 var input = Vector2.ZERO
 
 func _physics_process(delta):
@@ -26,4 +26,7 @@ func player_movement(delta):
 	else: 
 		velocity += (input * accel * delta)
 		velocity = velocity.limit_length(max_speed)
-	move_and_slide()		
+	move_and_slide()	
+func mario_shoot():
+		if Input.is_action_pressed("ui_j"):
+			#need to finish
