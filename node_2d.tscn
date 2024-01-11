@@ -1,8 +1,32 @@
-[gd_scene load_steps=2 format=3 uid="uid://ovwppidem4ym"]
+[gd_scene load_steps=6 format=3 uid="uid://ovwppidem4ym"]
 
 [ext_resource type="Script" path="res://Node2D.gd" id="1_xqpd2"]
+[ext_resource type="Texture2D" uid="uid://dfdsuwgjbmx1t" path="res://images/mariobgtest.jpeg" id="2_60tfw"]
+[ext_resource type="Script" path="res://Mario.gd" id="3_nq448"]
+[ext_resource type="Texture2D" uid="uid://bacubi0sjoeri" path="res://images/mario.png" id="4_67bb2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6dkq"]
+size = Vector2(93, 121)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_xqpd2")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 1148.0
+offset_bottom = 656.0
+texture = ExtResource("2_60tfw")
+expand_mode = 1
+
+[node name="Mario" type="CharacterBody2D" parent="."]
+script = ExtResource("3_nq448")
+
+[node name="Sprite2D" type="Sprite2D" parent="Mario"]
+position = Vector2(380.75, 539.333)
+scale = Vector2(2.10833, 2.10833)
+texture = ExtResource("4_67bb2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mario"]
+position = Vector2(380.5, 523.5)
+shape = SubResource("RectangleShape2D_j6dkq")
