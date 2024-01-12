@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @export var yes  = 1 
+@onready var animations = $AnimationPlayer
 
 const max_speed = 400
 const accel = 1000
@@ -9,10 +10,13 @@ var input = Vector2.ZERO
 
 func _physics_process(delta):
 	player_movement(delta)
+	player_shoot()
+func player_shoot():
+	if Input.is_action_just_pressed("ui_up") == true:
+		animations.play("shoot")
 
 func get_input():
 	input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
-	input.y = int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up")) 
 	return input.normalized()
 	
 func player_movement(delta):
