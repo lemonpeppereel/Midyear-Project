@@ -9,7 +9,7 @@ script/source = "extends TextEdit
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	get_tree().change_scene_to_file(\"res://menu.tscn\")
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -64,6 +64,14 @@ theme_override_colors/background_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(0.407843, 0.803922, 0.329412, 1)
 theme_override_colors/font_selected_color = Color(0, 0.321569, 0, 1)
 text = "Mario's Multiversal Madness"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
 script = SubResource("GDScript_v2kpe")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
