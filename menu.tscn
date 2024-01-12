@@ -1,7 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://8afnmpk6ff2u"]
+[gd_scene load_steps=4 format=3 uid="uid://8afnmpk6ff2u"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_l8b5i"]
 [ext_resource type="Texture2D" uid="uid://bb18dkqt4hj4" path="res://images/StartBackground.jpeg" id="2_d6vit"]
+
+[sub_resource type="GDScript" id="GDScript_v2kpe"]
+script/source = "extends TextEdit
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	get_tree().change_scene_to_file(\"res://menu.tscn\")
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,6 +24,7 @@ scale = Vector2(2.26781, 2.06378)
 script = ExtResource("1_l8b5i")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_left = 1.0
 offset_right = 1296.0
 offset_bottom = 720.0
@@ -17,6 +32,7 @@ scale = Vector2(0.391102, 0.432418)
 texture = ExtResource("2_d6vit")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_left = 16.3153
 offset_top = 141.003
 offset_right = 196.315
@@ -39,14 +55,16 @@ text = "EXIT"
 
 [node name="TextEdit" type="TextEdit" parent="."]
 texture_filter = 1
-offset_left = 6.61431
-offset_top = 5.33003
-offset_right = 238.614
-offset_bottom = 38.33
+layout_mode = 0
+offset_left = 122.144
+offset_top = 0.484548
+offset_right = 354.144
+offset_bottom = 36.4845
 theme_override_colors/background_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(0.407843, 0.803922, 0.329412, 1)
 theme_override_colors/font_selected_color = Color(0, 0.321569, 0, 1)
 text = "Mario's Multiversal Madness"
+script = SubResource("GDScript_v2kpe")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
