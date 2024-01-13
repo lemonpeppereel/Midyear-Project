@@ -56,3 +56,8 @@ libraries = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mario"]
 position = Vector2(382.5, 523.5)
 shape = SubResource("RectangleShape2D_j6dkq")
+
+[node name="Marker2D" type="Marker2D" parent="Mario"]
+position = Vector2(384, 448)
+
+[node name="CoinContainer" type="Node2D" parent="."]

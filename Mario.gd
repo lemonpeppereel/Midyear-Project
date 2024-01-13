@@ -8,6 +8,10 @@ const accel = 1000
 const friction = 100
 var input = Vector2.ZERO
 
+var coin_scene = preload("res://coin.tscn")
+signal coin_shot(coin_scene, location)
+@onready var Marker2d = $Marker2D
+
 func _physics_process(delta):
 	player_movement(delta)
 	player_shoot()
@@ -31,4 +35,12 @@ func player_movement(delta):
 		velocity += (input * accel * delta)
 		velocity = velocity.limit_length(max_speed)
 	move_and_slide()	
+	
+func process():
+	if Input.is_action_just_pressed("shoot"):
+		shoot()
+		
+func shoot():
+	coin_shot.emit(coin_scene, Marker2D.global_position)
+	
 
