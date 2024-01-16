@@ -36,11 +36,11 @@ func player_movement(delta):
 		velocity = velocity.limit_length(max_speed)
 	move_and_slide()	
 	
-func process():
+func _process(delta):
 	if Input.is_action_just_pressed("shoot"):
 		shoot()
 		
 func shoot():
-	coin_shot.emit(coin_scene, Marker2D.global_position)
+	coin_shot.emit(coin_scene, Marker2d.global_position)
 	
 
