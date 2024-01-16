@@ -1,13 +1,12 @@
 extends Node2D
 
 @onready var coin_container = $CoinContainer
-var mario = get_tree().get_first_node_in_group("Mario")
+var mario = null
 
 func _ready():
-	# mario = get_tree().get_first_node_in_group("Mario")
-	# print(mario)
-	# assert(mario!=null)
-	# mario.global_position = 
+	mario = get_tree().get_first_node_in_group("Mario")
+	print(mario)
+	assert(mario!=null) 
 	print(get_tree())
 	mario.coin_shot.connect(_on_player_coin_shot)
 	
