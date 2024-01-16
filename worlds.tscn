@@ -1,10 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvvypis08g5j1"]
+[gd_scene load_steps=3 format=3 uid="uid://dvvypis08g5j1"]
 
-[ext_resource type="Texture2D" uid="uid://db6hui5gg8lq0" path="res://images/controlsbackground.png" id="1_fm81d"]
-[ext_resource type="Script" path="res://TextureRect.gd" id="2_jqhcx"]
-[ext_resource type="Script" path="res://LinkButton.gd" id="3_1m4xg"]
+[ext_resource type="Texture2D" uid="uid://qbda5kikn5vb" path="res://images/worldmenubackground.png" id="1_pk2dw"]
+[ext_resource type="Script" path="res://mariochange.gd" id="2_v7mea"]
 
-[node name="Options" type="Control"]
+[node name="Worlds" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,20 +13,19 @@ grow_vertical = 2
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -27.0
-offset_top = -72.0
-offset_right = 3107.0
-offset_bottom = 2016.0
-scale = Vector2(0.384521, 0.383908)
-texture = ExtResource("1_fm81d")
-script = ExtResource("2_jqhcx")
+offset_left = -2.0
+offset_top = -0.999996
+offset_right = 3179.0
+offset_bottom = 1761.0
+scale = Vector2(0.381969, 0.381969)
+texture = ExtResource("1_pk2dw")
 
-[node name="LinkButton" type="LinkButton" parent="."]
+[node name="mariochange" type="LinkButton" parent="TextureRect"]
 layout_mode = 0
-offset_left = 376.0
-offset_top = 519.0
-offset_right = 905.0
-offset_bottom = 587.0
-script = ExtResource("3_1m4xg")
+offset_left = 122.0
+offset_top = 227.0
+offset_right = 629.0
+offset_bottom = 832.0
+script = ExtResource("2_v7mea")
 
-[connection signal="pressed" from="LinkButton" to="LinkButton" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/mariochange" to="TextureRect/mariochange" method="_on_pressed"]
