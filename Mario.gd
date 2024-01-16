@@ -9,7 +9,9 @@ const friction = 100
 var input = Vector2.ZERO
 
 var coin_scene = preload("res://coin.tscn")
+
 signal coin_shot(coin_scene, location)
+
 @onready var Marker2d = $Marker2D
 
 func _physics_process(delta):

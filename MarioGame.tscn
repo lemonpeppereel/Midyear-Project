@@ -61,3 +61,5 @@ shape = SubResource("RectangleShape2D_j6dkq")
 position = Vector2(384, 448)
 
 [node name="CoinContainer" type="Node2D" parent="."]
+
+[connection signal="coin_shot" from="Mario" to="." method="_on_mario_coin_shot"]
