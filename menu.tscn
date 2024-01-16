@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://8afnmpk6ff2u"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_l8b5i"]
-[ext_resource type="Texture2D" uid="uid://465al0y034w5" path="res://images/StartBackgroundV2.png" id="2_m76qg"]
+[ext_resource type="Texture2D" uid="uid://c48oebdmfw57t" path="res://images/StartBackgroundv3.png" id="2_ykc42"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -15,7 +15,7 @@ offset_left = 1.0
 offset_right = 1423.0
 offset_bottom = 731.0
 scale = Vector2(0.391102, 0.432418)
-texture = ExtResource("2_m76qg")
+texture = ExtResource("2_ykc42")
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

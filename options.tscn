@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvvypis08g5j1"]
+[gd_scene load_steps=4 format=3 uid="uid://mjyjlhdm74dq"]
 
-[ext_resource type="Texture2D" uid="uid://db6hui5gg8lq0" path="res://images/controlsbackground.png" id="1_fm81d"]
-[ext_resource type="Script" path="res://TextureRect.gd" id="2_jqhcx"]
-[ext_resource type="Script" path="res://LinkButton.gd" id="3_1m4xg"]
+[ext_resource type="Texture2D" uid="uid://db6hui5gg8lq0" path="res://images/controlsbackground.png" id="1_jnhng"]
+[ext_resource type="Script" path="res://TextureRect.gd" id="2_evp1o"]
+[ext_resource type="Script" path="res://LinkButton.gd" id="3_u3kh2"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -19,8 +19,8 @@ offset_top = -72.0
 offset_right = 3107.0
 offset_bottom = 2016.0
 scale = Vector2(0.384521, 0.383908)
-texture = ExtResource("1_fm81d")
-script = ExtResource("2_jqhcx")
+texture = ExtResource("1_jnhng")
+script = ExtResource("2_evp1o")
 
 [node name="LinkButton" type="LinkButton" parent="."]
 layout_mode = 0
@@ -28,6 +28,6 @@ offset_left = 376.0
 offset_top = 519.0
 offset_right = 905.0
 offset_bottom = 587.0
-script = ExtResource("3_1m4xg")
+script = ExtResource("3_u3kh2")
 
 [connection signal="pressed" from="LinkButton" to="LinkButton" method="_on_pressed"]
