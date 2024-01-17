@@ -8,3 +8,4 @@ func _input(_event):
 		coin.global_position = get_parent().global_position - Vector2(0, 20)
 		get_tree().root.get_node("MarioGame").add_child(coin)
 		
+		
