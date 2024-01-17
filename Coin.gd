@@ -4,8 +4,8 @@ extends Area2D
 @onready var animationz = $AnimationPlayer
 func _physics_process(delta):
 	global_position.y += -speed * delta
-	coinshot()
+	#coinshot()
 	
-func coinshot():
-	if Input.is_action_just_pressed("ui_up"):
-		animationz.play("coinanimation")
+#func coinshot():
+	#if Input.is_action_just_pressed("ui_up"):
+		#animationz.play("coinanimation")
