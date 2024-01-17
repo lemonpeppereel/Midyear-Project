@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dktg5m34hra06"]
+
+[ext_resource type="Script" path="res://StarWarsGame.gd" id="1_rxpjb"]
+[ext_resource type="Texture2D" uid="uid://bq62fcluh8kri" path="res://images/1SW_World.jpeg" id="2_3fltm"]
+[ext_resource type="Script" path="res://DV.gd" id="3_3ehha"]
+[ext_resource type="Texture2D" uid="uid://cp8eu1vmehwmh" path="res://images/1Vader.png" id="4_s8goo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g5kyc"]
+size = Vector2(155, 184)
+
+[node name="StarWarsGame" type="Node2D"]
+position = Vector2(-1, 0)
+script = ExtResource("1_rxpjb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 4.0
+offset_top = -298.0
+offset_right = 1444.0
+offset_bottom = 686.0
+texture = ExtResource("2_3fltm")
+
+[node name="DV" type="CharacterBody2D" parent="."]
+script = ExtResource("3_3ehha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DV"]
+position = Vector2(341, 593)
+shape = SubResource("RectangleShape2D_g5kyc")
+
+[node name="Vader" type="Sprite2D" parent="DV"]
+position = Vector2(337, 587)
+texture = ExtResource("4_s8goo")

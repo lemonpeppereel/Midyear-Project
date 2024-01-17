@@ -40,6 +40,7 @@ offset_right = 1148.0
 offset_bottom = 656.0
 texture = ExtResource("2_sy4ey")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Mario" type="CharacterBody2D" parent="."]
 script = ExtResource("3_ma6q8")
