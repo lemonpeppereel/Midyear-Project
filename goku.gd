@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const max_speed = 500
 const accel = 1000
-const friction = 200
+const friction = 2000
 var input = Vector2.ZERO
 
 func _physics_process(delta):

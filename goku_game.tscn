@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cfd0k2d4yyo07"]
 
 [ext_resource type="Texture2D" uid="uid://bpv7pwd0itclj" path="res://images/dbzback.jpeg" id="1_yr6wy"]
-[ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_gk2ax"]
+[ext_resource type="Script" path="res://goku.gd" id="2_gk2ax"]
 [ext_resource type="Texture2D" uid="uid://bdwgx7lnadiu0" path="res://images/1gokufire.png" id="3_pe3k1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_25ect"]
