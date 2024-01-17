@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://mjyjlhdm74dq"]
+[gd_scene load_steps=3 format=3 uid="uid://mjyjlhdm74dq"]
 
 [ext_resource type="Texture2D" uid="uid://db6hui5gg8lq0" path="res://images/controlsbackground.png" id="1_jnhng"]
-[ext_resource type="Script" path="res://TextureRect.gd" id="2_evp1o"]
-[ext_resource type="Script" path="res://LinkButton.gd" id="3_u3kh2"]
+[ext_resource type="Script" path="res://Backtomenu.gd" id="3_u3kh2"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -20,7 +19,6 @@ offset_right = 3107.0
 offset_bottom = 2016.0
 scale = Vector2(0.384521, 0.383908)
 texture = ExtResource("1_jnhng")
-script = ExtResource("2_evp1o")
 
 [node name="LinkButton" type="LinkButton" parent="."]
 layout_mode = 0
