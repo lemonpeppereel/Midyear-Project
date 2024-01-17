@@ -30,6 +30,7 @@ offset_bottom = 832.0
 script = ExtResource("2_v7mea")
 
 [node name="dbzchange" type="LinkButton" parent="TextureRect"]
+layout_mode = 0
 offset_left = 2387.63
 offset_top = 1013.17
 offset_right = 2894.63

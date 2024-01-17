@@ -8,6 +8,7 @@ radius = 40.0
 height = 92.0
 
 [node name="coin" type="Area2D"]
+scale = Vector2(1.83173, 1.83173)
 script = ExtResource("1_cjbog")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
