@@ -30,7 +30,7 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6dkq"]
 size = Vector2(93, 121)
 
-[node name="Game" type="Node2D"]
+[node name="MarioGame" type="Node2D"]
 script = ExtResource("1_4mp50")
 
 [node name="TextureRect" type="TextureRect" parent="."]

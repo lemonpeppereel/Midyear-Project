@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvvypis08g5j1"]
+[gd_scene load_steps=4 format=3 uid="uid://dvvypis08g5j1"]
 
 [ext_resource type="Texture2D" uid="uid://qbda5kikn5vb" path="res://images/worldmenubackground.png" id="1_pk2dw"]
 [ext_resource type="Script" path="res://mariochange.gd" id="2_v7mea"]
+[ext_resource type="Script" path="res://dbzchange.gd" id="3_34kpl"]
 
 [node name="Worlds" type="Control"]
 layout_mode = 3
@@ -28,4 +29,13 @@ offset_right = 629.0
 offset_bottom = 832.0
 script = ExtResource("2_v7mea")
 
+[node name="dbzchange" type="LinkButton" parent="TextureRect"]
+offset_left = 2387.63
+offset_top = 1013.17
+offset_right = 2894.63
+offset_bottom = 1618.17
+scale = Vector2(1.10471, 1.10472)
+script = ExtResource("3_34kpl")
+
 [connection signal="pressed" from="TextureRect/mariochange" to="TextureRect/mariochange" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/dbzchange" to="TextureRect/dbzchange" method="_on_pressed"]
