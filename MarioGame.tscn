@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://ovwppidem4ym"]
+[gd_scene load_steps=10 format=3 uid="uid://ovwppidem4ym"]
 
 [ext_resource type="Script" path="res://Node2D.gd" id="1_4mp50"]
 [ext_resource type="Texture2D" uid="uid://dfdsuwgjbmx1t" path="res://images/mariobgtest.jpeg" id="2_sy4ey"]
 [ext_resource type="Script" path="res://Mario.gd" id="3_ma6q8"]
 [ext_resource type="Texture2D" uid="uid://b77vmmuth38t8" path="res://images/mario-sprite.png" id="4_4d3ro"]
+[ext_resource type="Script" path="res://shooting.gd" id="5_71ave"]
+[ext_resource type="PackedScene" uid="uid://ngjvfrs21wsp" path="res://coin.tscn" id="6_vp7om"]
 
 [sub_resource type="Animation" id="Animation_fqvxo"]
 resource_name = "shoot"
@@ -57,9 +59,7 @@ libraries = {
 position = Vector2(382.5, 523.5)
 shape = SubResource("RectangleShape2D_j6dkq")
 
-[node name="Marker2D" type="Marker2D" parent="Mario"]
-position = Vector2(384, 448)
-
-[node name="CoinContainer" type="Node2D" parent="."]
-
-[connection signal="coin_shot" from="Mario" to="." method="_on_mario_coin_shot"]
+[node name="ShootingOrigin" type="Node2D" parent="Mario"]
+position = Vector2(385, 447)
+script = ExtResource("5_71ave")
+coin_scene = ExtResource("6_vp7om")
