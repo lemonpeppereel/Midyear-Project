@@ -24,24 +24,25 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iic5m"]
-radius = 6.00525
-height = 13.1024
+radius = 9.82678
+height = 19.6536
 
 [node name="Coin" type="Area2D"]
 scale = Vector2(1.83173, 1.83173)
 script = ExtResource("1_qra6x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(194.898, 268)
-scale = Vector2(0.0466468, 0.0466468)
+position = Vector2(190.53, 264.231)
+scale = Vector2(0.0942936, 0.0942936)
 texture = ExtResource("2_tweyj")
 hframes = 5
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+[node name="Coinani" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
 libraries = {
 "": SubResource("AnimationLibrary_x2hnl")
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(194.898, 268)
+position = Vector2(191.076, 268.599)
 shape = SubResource("CapsuleShape2D_iic5m")
