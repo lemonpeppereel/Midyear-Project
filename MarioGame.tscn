@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ovwppidem4ym"]
+[gd_scene load_steps=11 format=3 uid="uid://ovwppidem4ym"]
 
 [ext_resource type="Script" path="res://Node2D.gd" id="1_4mp50"]
 [ext_resource type="Texture2D" uid="uid://dfdsuwgjbmx1t" path="res://images/mariobgtest.jpeg" id="2_sy4ey"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b77vmmuth38t8" path="res://images/mario-sprite.png" id="4_4d3ro"]
 [ext_resource type="Script" path="res://shooting.gd" id="5_71ave"]
 [ext_resource type="PackedScene" uid="uid://ngjvfrs21wsp" path="res://coin.tscn" id="6_vp7om"]
+[ext_resource type="AudioStream" uid="uid://bv871grun77cw" path="res://MarioTheme.mp3" id="7_ngy1d"]
 
 [sub_resource type="Animation" id="Animation_fqvxo"]
 resource_name = "shoot"
@@ -64,3 +65,8 @@ shape = SubResource("RectangleShape2D_j6dkq")
 position = Vector2(385, 447)
 script = ExtResource("5_71ave")
 coin_scene = ExtResource("6_vp7om")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_ngy1d")
+volume_db = 0.8
+autoplay = true

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dktg5m34hra06"]
+[gd_scene load_steps=7 format=3 uid="uid://dktg5m34hra06"]
 
 [ext_resource type="Script" path="res://StarWarsGame.gd" id="1_rxpjb"]
 [ext_resource type="Texture2D" uid="uid://bq62fcluh8kri" path="res://images/1SW_World.jpeg" id="2_3fltm"]
 [ext_resource type="Script" path="res://DV.gd" id="3_3ehha"]
 [ext_resource type="Texture2D" uid="uid://cp8eu1vmehwmh" path="res://images/1Vader.png" id="4_s8goo"]
+[ext_resource type="AudioStream" uid="uid://bqcur2hvvsudq" path="res://SWTheme.mp3" id="5_xa7ng"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g5kyc"]
 size = Vector2(155, 184)
@@ -29,3 +30,8 @@ shape = SubResource("RectangleShape2D_g5kyc")
 [node name="Vader" type="Sprite2D" parent="DV"]
 position = Vector2(337, 587)
 texture = ExtResource("4_s8goo")
+
+[node name="ImperialMarch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_xa7ng")
+volume_db = 0.8
+autoplay = true
