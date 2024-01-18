@@ -43,7 +43,7 @@ script = ExtResource("3_34kpl")
 [node name="swchange" type="LinkButton" parent="TextureRect"]
 layout_mode = 0
 offset_left = 1681.0
-offset_top = 702.0
+offset_top = 199.0
 offset_right = 2147.0
 offset_bottom = 833.0
 script = ExtResource("4_or7m8")
@@ -51,7 +51,7 @@ script = ExtResource("4_or7m8")
 [node name="spdmanchange" type="LinkButton" parent="TextureRect"]
 layout_mode = 0
 offset_left = 1670.0
-offset_top = 1566.0
+offset_top = 1011.0
 offset_right = 2197.0
 offset_bottom = 1686.0
 script = ExtResource("5_vxae6")
