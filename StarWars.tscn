@@ -24,14 +24,23 @@ texture = ExtResource("2_3fltm")
 script = ExtResource("3_3ehha")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DV"]
-position = Vector2(341, 593)
+position = Vector2(337, 558)
 shape = SubResource("RectangleShape2D_g5kyc")
 
 [node name="Vader" type="Sprite2D" parent="DV"]
-position = Vector2(337, 587)
+position = Vector2(336, 562)
 texture = ExtResource("4_s8goo")
 
 [node name="ImperialMarch" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_xa7ng")
 volume_db = 0.8
 autoplay = true
+
+[node name="back" type="Button" parent="."]
+offset_left = 947.0
+offset_top = 21.0
+offset_right = 1100.0
+offset_bottom = 82.0
+text = "BACK"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

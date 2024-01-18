@@ -1,7 +1,38 @@
-[gd_scene format=3 uid="uid://co7ylw1ch7v27"]
+[gd_scene load_steps=6 format=3 uid="uid://co7ylw1ch7v27"]
+
+[ext_resource type="Script" path="res://tmnt.gd" id="1_1g307"]
+[ext_resource type="Texture2D" uid="uid://cyf6tfwhhn7qr" path="res://images/TMNTBackground.jpeg" id="1_6aqru"]
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_v2elp"]
+[ext_resource type="Texture2D" uid="uid://cntnj3iarca68" path="res://images/1TeenMutantNinjaTurtles.png" id="3_o1g6e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_opwjy"]
+size = Vector2(203, 238)
 
 [node name="TMNT" type="Node2D"]
+script = ExtResource("1_1g307")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 1493.0
+offset_bottom = 840.0
+texture = ExtResource("1_6aqru")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_v2elp")
+
+[node name="1TeenMutantNinjaTurtles" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(348, 521)
+scale = Vector2(1.22, 1.22)
+texture = ExtResource("3_o1g6e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(368, 526)
+shape = SubResource("RectangleShape2D_opwjy")
+
+[node name="back" type="Button" parent="."]
+offset_left = 919.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 100.0
+text = "BACK"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

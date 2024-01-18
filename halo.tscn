@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://d237qel7gfh0q"]
+
+[ext_resource type="Texture2D" uid="uid://dg1mw3hox4niy" path="res://images/HaloBgd.jpeg" id="1_iqpv7"]
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_i114q"]
+[ext_resource type="Texture2D" uid="uid://bxqls2u46gddi" path="res://images/1MasterChief.png" id="3_2605j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xqcik"]
+size = Vector2(174.5, 203)
+
+[node name="halo" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 3.0
+offset_top = -353.0
+offset_right = 1923.0
+offset_bottom = 691.0
+texture = ExtResource("1_iqpv7")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_i114q")
+
+[node name="1MasterChief" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(99, 534)
+scale = Vector2(2.04, 2.04)
+texture = ExtResource("3_2605j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(108, 535)
+shape = SubResource("RectangleShape2D_xqcik")

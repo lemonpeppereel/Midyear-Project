@@ -31,7 +31,7 @@ position = Vector2(-179.338, -1437.58)
 scale = Vector2(2.87708, 2.87708)
 shape = SubResource("RectangleShape2D_25ect")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="dbztheme" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_e7e0k")
 volume_db = 0.8
 autoplay = true
