@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var animations = $AnimationPlayer
 @onready var animations2 = $idle
 
-const max_speed = 400
+const max_speed = 520
 const accel = 1000
 const friction = 2000
 var input = Vector2.ZERO
