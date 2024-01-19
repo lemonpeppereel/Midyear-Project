@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 @export var yes  = 1 
 @onready var animations = $AnimationPlayer
+@onready var animations2 = $idle
 
 const max_speed = 400
 const accel = 1000
@@ -11,6 +12,7 @@ var input = Vector2.ZERO
 func _physics_process(delta):
 	player_movement(delta)
 	player_shoot()
+	animations2.play("idle")
 func player_shoot():
 	if Input.is_action_just_pressed("ui_up"):
 		animations.play("shoot")
