@@ -1,6 +1,7 @@
-[gd_scene load_steps=13 format=3 uid="uid://ovwppidem4ym"]
+[gd_scene load_steps=14 format=3 uid="uid://ovwppidem4ym"]
 
 [ext_resource type="Script" path="res://Node2D.gd" id="1_4mp50"]
+[ext_resource type="PackedScene" uid="uid://cwrx1tuuyou7k" path="res://koopatroopa.tscn" id="2_2mb6o"]
 [ext_resource type="Texture2D" uid="uid://dfdsuwgjbmx1t" path="res://images/mariobgtest.jpeg" id="2_sy4ey"]
 [ext_resource type="Script" path="res://Mario.gd" id="3_ma6q8"]
 [ext_resource type="Texture2D" uid="uid://b77vmmuth38t8" path="res://images/mario-sprite.png" id="4_4d3ro"]
@@ -49,10 +50,11 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6dkq"]
-size = Vector2(93, 121)
+size = Vector2(217.5, 323.5)
 
 [node name="MarioGame" type="Node2D"]
 script = ExtResource("1_4mp50")
+koopa_scene = ExtResource("2_2mb6o")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 2.0
@@ -68,8 +70,8 @@ metadata/_edit_use_anchors_ = true
 script = ExtResource("3_ma6q8")
 
 [node name="Sprite2D" type="Sprite2D" parent="Mario"]
-position = Vector2(385.75, 539.333)
-scale = Vector2(2.10833, 2.10833)
+position = Vector2(600.125, 1508.84)
+scale = Vector2(5.77083, 5.77083)
 texture = ExtResource("4_4d3ro")
 hframes = 8
 vframes = 2
@@ -86,11 +88,11 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mario"]
-position = Vector2(382.5, 523.5)
+position = Vector2(598, 1461)
 shape = SubResource("RectangleShape2D_j6dkq")
 
 [node name="ShootingOrigin" type="Node2D" parent="Mario"]
-position = Vector2(385, 447)
+position = Vector2(598, 1259)
 script = ExtResource("5_71ave")
 coin_scene = ExtResource("6_vp7om")
 

@@ -32,7 +32,7 @@ scale = Vector2(1.83173, 1.83173)
 script = ExtResource("1_qra6x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(190.53, 264.231)
+position = Vector2(300.758, 694.375)
 scale = Vector2(0.0942936, 0.0942936)
 texture = ExtResource("2_tweyj")
 hframes = 5
@@ -44,5 +44,5 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(191.076, 268.599)
+position = Vector2(301.304, 698.743)
 shape = SubResource("CapsuleShape2D_iic5m")
