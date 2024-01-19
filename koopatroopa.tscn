@@ -16,3 +16,5 @@ shape = SubResource("CircleShape2D_u3naw")
 [node name="troopa" type="Sprite2D" parent="."]
 position = Vector2(762, -117)
 texture = ExtResource("2_n0p7e")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
