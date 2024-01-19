@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://be8jrceu6ev8l"]
+
+[ext_resource type="Texture2D" uid="uid://b8awm0te2wwvw" path="res://images/SamuraiBackground.webp" id="1_a8vsb"]
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_d17wv"]
+[ext_resource type="Texture2D" uid="uid://bp8odxojj5exj" path="res://images/1Samurai.png" id="2_tmcn2"]
+[ext_resource type="AudioStream" uid="uid://8usil75rx4cw" path="res://SamuraiTheme.mp3" id="4_ru2pq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_daase"]
+size = Vector2(424.25, 620.5)
+
+[node name="Samurai" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_top = -1531.0
+offset_right = 3840.0
+offset_bottom = 2309.0
+texture = ExtResource("1_a8vsb")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+script = ExtResource("2_d17wv")
+
+[node name="1Samurai" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(699, 940)
+scale = Vector2(2.61, 2.61)
+texture = ExtResource("2_tmcn2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(699.875, 942.25)
+shape = SubResource("RectangleShape2D_daase")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ru2pq")
+volume_db = 0.8
+autoplay = true

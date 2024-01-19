@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b5leu8bgoh8ij"]
+[gd_scene load_steps=6 format=3 uid="uid://b5leu8bgoh8ij"]
 
 [ext_resource type="Texture2D" uid="uid://62rhwg3fq0y6" path="res://images/streetfighterbackground.jpg" id="1_ra3an"]
 [ext_resource type="Script" path="res://Ryu.gd" id="2_agdgg"]
 [ext_resource type="Texture2D" uid="uid://pmjowbcx7tul" path="res://images/1ActualRyu.png" id="3_30kci"]
+[ext_resource type="AudioStream" uid="uid://4na0b5scvtsg" path="res://streetfightTheme.mp3" id="4_wvqr5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pyurv"]
 size = Vector2(144, 196)
@@ -25,3 +26,8 @@ texture = ExtResource("3_30kci")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ryu"]
 position = Vector2(249, 467)
 shape = SubResource("RectangleShape2D_pyurv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wvqr5")
+volume_db = 0.8
+autoplay = true

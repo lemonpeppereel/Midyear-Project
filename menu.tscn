@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://8afnmpk6ff2u"]
+[gd_scene load_steps=4 format=3 uid="uid://8afnmpk6ff2u"]
 
 [ext_resource type="Script" path="res://Menu.gd" id="1_l8b5i"]
 [ext_resource type="Texture2D" uid="uid://c48oebdmfw57t" path="res://images/StartBackgroundv3.png" id="2_ykc42"]
+[ext_resource type="AudioStream" uid="uid://bvgsvu8f15jmg" path="res://LobbyTheme.mp3" id="3_18c4n"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -43,6 +44,11 @@ text = "Options"
 [node name="Exit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "EXIT"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_18c4n")
+volume_db = 0.6
+autoplay = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

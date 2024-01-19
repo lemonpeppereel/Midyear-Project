@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://d237qel7gfh0q"]
+[gd_scene load_steps=6 format=3 uid="uid://d237qel7gfh0q"]
 
 [ext_resource type="Texture2D" uid="uid://dg1mw3hox4niy" path="res://images/HaloBgd.jpeg" id="1_iqpv7"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_i114q"]
 [ext_resource type="Texture2D" uid="uid://bxqls2u46gddi" path="res://images/1MasterChief.png" id="3_2605j"]
+[ext_resource type="AudioStream" uid="uid://d3tvgredtr4p7" path="res://HaloTheme.mp3" id="4_arej8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqcik"]
 size = Vector2(174.5, 203)
@@ -27,3 +28,8 @@ texture = ExtResource("3_2605j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(108, 535)
 shape = SubResource("RectangleShape2D_xqcik")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_arej8")
+volume_db = 0.8
+autoplay = true

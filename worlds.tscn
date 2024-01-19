@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dvvypis08g5j1"]
+[gd_scene load_steps=10 format=3 uid="uid://dvvypis08g5j1"]
 
 [ext_resource type="Texture2D" uid="uid://qbda5kikn5vb" path="res://images/worldmenubackground.png" id="1_pk2dw"]
 [ext_resource type="Script" path="res://mariochange.gd" id="2_v7mea"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://sfchange.gd" id="6_wr37q"]
 [ext_resource type="Script" path="res://tmntchange.gd" id="7_ndgrq"]
 [ext_resource type="Script" path="res://halochange.gd" id="8_1nwr3"]
+[ext_resource type="Script" path="res://samchange.gd" id="9_vfmjd"]
 
 [node name="Worlds" type="Control"]
 layout_mode = 3
@@ -83,6 +84,14 @@ offset_right = 1340.0
 offset_bottom = 1678.0
 script = ExtResource("8_1nwr3")
 
+[node name="samchange" type="LinkButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 940.0
+offset_right = 573.0
+offset_bottom = 1676.0
+script = ExtResource("9_vfmjd")
+
 [connection signal="pressed" from="TextureRect/mariochange" to="TextureRect/mariochange" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/dbzchange" to="TextureRect/dbzchange" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/swchange" to="TextureRect/swchange" method="_on_pressed"]
@@ -90,3 +99,4 @@ script = ExtResource("8_1nwr3")
 [connection signal="pressed" from="TextureRect/sfchange" to="TextureRect/sfchange" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/tmntchange" to="TextureRect/tmntchange" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/halochange" to="TextureRect/halochange" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/samchange" to="TextureRect/samchange" method="_on_pressed"]
