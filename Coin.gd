@@ -2,6 +2,7 @@ extends Area2D
 
 @export var speed = 400
 @onready var animations = $Coinani
+
 func _physics_process(delta):
 	global_position.y += -speed * delta
 	coinshot()

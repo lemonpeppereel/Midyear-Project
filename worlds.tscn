@@ -1,14 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://dvvypis08g5j1"]
+[gd_scene load_steps=3 format=3 uid="uid://dvvypis08g5j1"]
 
-[ext_resource type="Texture2D" uid="uid://qbda5kikn5vb" path="res://images/worldmenubackground.png" id="1_pk2dw"]
+[ext_resource type="Texture2D" uid="uid://dmeupsqwcqmtd" path="res://images/Screen Shot 2024-01-19 at 6.43.42 PM.png" id="1_gc8vf"]
 [ext_resource type="Script" path="res://mariochange.gd" id="2_v7mea"]
-[ext_resource type="Script" path="res://dbzchange.gd" id="3_34kpl"]
-[ext_resource type="Script" path="res://swchange.gd" id="4_or7m8"]
-[ext_resource type="Script" path="res://spdmanchange.gd" id="5_vxae6"]
-[ext_resource type="Script" path="res://sfchange.gd" id="6_wr37q"]
-[ext_resource type="Script" path="res://tmntchange.gd" id="7_ndgrq"]
-[ext_resource type="Script" path="res://halochange.gd" id="8_1nwr3"]
-[ext_resource type="Script" path="res://samchange.gd" id="9_vfmjd"]
 
 [node name="Worlds" type="Control"]
 layout_mode = 3
@@ -21,82 +14,18 @@ grow_vertical = 2
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = -2.0
-offset_top = -0.999996
-offset_right = 3179.0
-offset_bottom = 1761.0
+offset_top = -1.0
+offset_right = 7569.0
+offset_bottom = 4840.0
 scale = Vector2(0.381969, 0.381969)
-texture = ExtResource("1_pk2dw")
+texture = ExtResource("1_gc8vf")
 
 [node name="mariochange" type="LinkButton" parent="TextureRect"]
 layout_mode = 0
-offset_left = 122.0
-offset_top = 227.0
-offset_right = 629.0
-offset_bottom = 832.0
+offset_left = 2503.0
+offset_top = 1474.0
+offset_right = 4691.0
+offset_bottom = 4228.0
 script = ExtResource("2_v7mea")
 
-[node name="dbzchange" type="LinkButton" parent="TextureRect"]
-layout_mode = 0
-offset_left = 2387.63
-offset_top = 1013.17
-offset_right = 2894.63
-offset_bottom = 1618.17
-scale = Vector2(1.10471, 1.10472)
-script = ExtResource("3_34kpl")
-
-[node name="swchange" type="LinkButton" parent="TextureRect"]
-layout_mode = 0
-offset_left = 1681.0
-offset_top = 199.0
-offset_right = 2147.0
-offset_bottom = 833.0
-script = ExtResource("4_or7m8")
-
-[node name="spdmanchange" type="LinkButton" parent="TextureRect"]
-layout_mode = 0
-offset_left = 1670.0
-offset_top = 1011.0
-offset_right = 2197.0
-offset_bottom = 1686.0
-script = ExtResource("5_vxae6")
-
-[node name="sfchange" type="LinkButton" parent="TextureRect"]
-layout_mode = 0
-offset_left = 817.0
-offset_top = 220.0
-offset_right = 1437.0
-offset_bottom = 861.0
-script = ExtResource("6_wr37q")
-
-[node name="tmntchange" type="LinkButton" parent="TextureRect"]
-layout_mode = 0
-offset_left = 2278.0
-offset_top = 152.0
-offset_right = 2869.0
-offset_bottom = 827.0
-script = ExtResource("7_ndgrq")
-
-[node name="halochange" type="LinkButton" parent="TextureRect"]
-layout_mode = 0
-offset_left = 901.0
-offset_top = 982.0
-offset_right = 1340.0
-offset_bottom = 1678.0
-script = ExtResource("8_1nwr3")
-
-[node name="samchange" type="LinkButton" parent="TextureRect"]
-layout_mode = 0
-offset_left = 105.0
-offset_top = 940.0
-offset_right = 573.0
-offset_bottom = 1676.0
-script = ExtResource("9_vfmjd")
-
 [connection signal="pressed" from="TextureRect/mariochange" to="TextureRect/mariochange" method="_on_pressed"]
-[connection signal="pressed" from="TextureRect/dbzchange" to="TextureRect/dbzchange" method="_on_pressed"]
-[connection signal="pressed" from="TextureRect/swchange" to="TextureRect/swchange" method="_on_pressed"]
-[connection signal="pressed" from="TextureRect/spdmanchange" to="TextureRect/spdmanchange" method="_on_pressed"]
-[connection signal="pressed" from="TextureRect/sfchange" to="TextureRect/sfchange" method="_on_pressed"]
-[connection signal="pressed" from="TextureRect/tmntchange" to="TextureRect/tmntchange" method="_on_pressed"]
-[connection signal="pressed" from="TextureRect/halochange" to="TextureRect/halochange" method="_on_pressed"]
-[connection signal="pressed" from="TextureRect/samchange" to="TextureRect/samchange" method="_on_pressed"]
