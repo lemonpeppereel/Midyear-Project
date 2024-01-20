@@ -1,35 +1,45 @@
-[gd_scene load_steps=7 format=3 uid="uid://dktg5m34hra06"]
+[gd_scene load_steps=10 format=3 uid="uid://dktg5m34hra06"]
 
 [ext_resource type="Script" path="res://StarWarsGame.gd" id="1_rxpjb"]
 [ext_resource type="Texture2D" uid="uid://bq62fcluh8kri" path="res://images/1SW_World.jpeg" id="2_3fltm"]
+[ext_resource type="PackedScene" uid="uid://leaqjxokuro0" path="res://fighter_jet.tscn" id="2_xq1do"]
 [ext_resource type="Script" path="res://DV.gd" id="3_3ehha"]
 [ext_resource type="Texture2D" uid="uid://cp8eu1vmehwmh" path="res://images/1Vader.png" id="4_s8goo"]
 [ext_resource type="AudioStream" uid="uid://bqcur2hvvsudq" path="res://SWTheme.mp3" id="5_xa7ng"]
+[ext_resource type="Script" path="res://ShootingOrigin.gd" id="6_uhwse"]
+[ext_resource type="PackedScene" uid="uid://ftjwsf2ojp0t" path="res://force_push.tscn" id="7_lnvde"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g5kyc"]
-size = Vector2(155, 184)
+size = Vector2(308.75, 419)
 
-[node name="StarWarsGame" type="Node2D"]
+[node name="StarWars" type="Node2D"]
 position = Vector2(-1, 0)
 script = ExtResource("1_rxpjb")
+fighter_scene = ExtResource("2_xq1do")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 4.0
-offset_top = -298.0
-offset_right = 1444.0
-offset_bottom = 686.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 3268.0
+offset_bottom = 1865.0
 texture = ExtResource("2_3fltm")
 
 [node name="DV" type="CharacterBody2D" parent="."]
 script = ExtResource("3_3ehha")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DV"]
-position = Vector2(337, 558)
+position = Vector2(751, 1606)
 shape = SubResource("RectangleShape2D_g5kyc")
 
 [node name="Vader" type="Sprite2D" parent="DV"]
-position = Vector2(336, 562)
+position = Vector2(750.5, 1594.5)
+scale = Vector2(2.345, 2.345)
 texture = ExtResource("4_s8goo")
+
+[node name="ShootingOrigin" type="Node2D" parent="DV"]
+position = Vector2(727, 1363)
+script = ExtResource("6_uhwse")
+force_scene = ExtResource("7_lnvde")
 
 [node name="ImperialMarch" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_xa7ng")
@@ -37,10 +47,10 @@ volume_db = 0.8
 autoplay = true
 
 [node name="back" type="Button" parent="."]
-offset_left = 947.0
-offset_top = 21.0
-offset_right = 1100.0
-offset_bottom = 82.0
+offset_left = 2418.0
+offset_top = 49.0
+offset_right = 2826.0
+offset_bottom = 212.0
 text = "BACK"
 
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://ftjwsf2ojp0t"]
+
+[ext_resource type="Script" path="res://ForcePush.gd" id="1_48ecm"]
+[ext_resource type="Texture2D" uid="uid://crulxd5a51dp1" path="res://images/Forcepush.png" id="2_big6x"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mtytw"]
+radius = 32.0
+height = 156.0
+
+[node name="ForcePush" type="Area2D"]
+position = Vector2(76, 0)
+script = ExtResource("1_48ecm")
+
+[node name="Forcepush" type="Sprite2D" parent="."]
+position = Vector2(724, 1263)
+scale = Vector2(0.216575, 0.23013)
+texture = ExtResource("2_big6x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(720, 1260)
+shape = SubResource("CapsuleShape2D_mtytw")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
