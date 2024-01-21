@@ -36,7 +36,7 @@ position = Vector2(750.5, 1594.5)
 scale = Vector2(2.345, 2.345)
 texture = ExtResource("4_s8goo")
 
-[node name="ShootingOrigin" type="Node2D" parent="DV"]
+[node name="ShootingOriginSW" type="Node2D" parent="DV"]
 position = Vector2(727, 1363)
 script = ExtResource("6_uhwse")
 force_scene = ExtResource("7_lnvde")
