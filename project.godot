@@ -17,4 +17,4 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Coin="*res://Coin.gd"
+MarioScore="*res://MarioScore.gd"

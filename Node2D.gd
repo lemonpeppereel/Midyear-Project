@@ -7,7 +7,6 @@ var screensize = Vector2(3200,1800)
 var random = RandomNumberGenerator.new()
 
 @onready var koopascene = preload("res://koopatroopa.tscn")
-@onready var coingame = preload("res://Coin.gd")
 
 func _process(delta):
 	if Input.is_action_pressed("ui_down"):
@@ -22,7 +21,7 @@ func _input(_event):
 	
 func _change_world():
 	random.randomize()
-	if coin.score >= 10:
+	if MarioScore.score >= 100:
 		if random.randi_range(0,7) == 0:
 			get_tree().change_scene_to_file("res://goku_game.tscn")
 		elif random.randi_range(0,7) == 1:
