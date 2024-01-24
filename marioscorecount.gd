@@ -1,14 +1,8 @@
 extends Label
-
-var value = 0
 	
-func _addscore():
-	value += MarioScore.score
 	
 func _ready():
-	if value>=0:
-		text = "Score: " + str(value)
-		_addscore()
+		text = "Score: " + str((MarioScore.score)[0])
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
