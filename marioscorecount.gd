@@ -1,12 +1,8 @@
 extends Label
-	
-	
-func _ready():
-	text = "Score: " + str(MarioScore.score)
 
-func updatescore():
-	text = "Score: " + str(MarioScore.score)
-	print(MarioScore.score)
+var value = 0:
+	set(value):
+		text = "Score: " + str(value)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
