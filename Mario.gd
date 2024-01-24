@@ -12,14 +12,22 @@ var input = Vector2.ZERO
 func _physics_process(delta):
 	player_movement(delta)
 	player_shoot()
-	animations2.play("idle")
 func player_shoot():
 	if Input.is_action_just_pressed("ui_up"):
 		animations.play("shoot")
 
 func get_input():
 	input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
-	return input.normalized()
+	if int(Input.is_action_pressed("ui_right")) == 1:
+		animations2.play("idle")
+		return input.normalized()
+	elif int(Input.is_action_pressed("ui_left")) == 1:
+		animations2.play("idle")
+		return input.normalized()
+	else:
+		animations2.stop()
+		return input.normalized()
+
 	
 func player_movement(delta):
 	input = get_input()

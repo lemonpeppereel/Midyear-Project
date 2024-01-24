@@ -14,3 +14,4 @@ func coinshot():
 func _on_area_entered(area):
 	area.queue_free()
 	MarioScore.score += 10;
+	Marioscorecount.updatescore()
