@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://ngjvfrs21wsp"]
+[gd_scene load_steps=6 format=3 uid="uid://ngjvfrs21wsp"]
 
+[ext_resource type="Script" path="res://coin.gd" id="1_qra6x"]
 [ext_resource type="Texture2D" uid="uid://b2r8xb02t4un8" path="res://images/coin-sprite.png" id="2_tweyj"]
 
 [sub_resource type="Animation" id="Animation_2kq50"]
@@ -28,6 +29,7 @@ height = 36.0305
 
 [node name="Coin" type="Area2D"]
 scale = Vector2(1.83173, 1.83173)
+script = ExtResource("1_qra6x")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(242.642, 802.222)
