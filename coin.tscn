@@ -24,7 +24,7 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_iic5m"]
-radius = 18.0152
+radius = 18.0153
 height = 36.0305
 
 [node name="Coin" type="Area2D"]
