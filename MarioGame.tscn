@@ -104,7 +104,6 @@ libraries = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mario"]
 position = Vector2(458.678, 1525)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_j6dkq")
 
 [node name="ShootingOrigin" type="Node2D" parent="Mario"]
