@@ -2,7 +2,7 @@ extends Label
 
 var value = 0
 
-func _ready():
+func _process(delta):
 	self.text = "Score: " + str(value)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
