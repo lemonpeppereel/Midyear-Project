@@ -1,9 +1,10 @@
 extends Label
 
-var value = 0:
-	set(value):
-		text = "Score: " + str(value)
+var value = 0
+
+func _ready():
+	text = "Score: " + str(value)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func updatescore():
+	text = "Score: " + str(value)
