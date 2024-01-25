@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var speed = 400
-@onready var animations = $Coinani
+@onready var animationsc = $Coinani
 		
 func _physics_process(delta):
 	global_position.y += -speed * delta
@@ -9,7 +9,7 @@ func _physics_process(delta):
 	
 func coinshot():
 	if Input.is_action_just_pressed("ui_up"):
-		animations.play("Coinani")
+		animationsc.play("coinanimation")
 		
 func _on_area_entered(area):
 	area.queue_free()
