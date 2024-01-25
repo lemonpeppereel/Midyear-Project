@@ -11,7 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://bv871grun77cw" path="res://MarioTheme.mp3" id="7_ngy1d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fbopp"]
-font_size = 100
+font_size = 40
 
 [sub_resource type="Animation" id="Animation_fqvxo"]
 resource_name = "shoot"
@@ -54,17 +54,18 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6dkq"]
-size = Vector2(217.5, 323.5)
+size = Vector2(71.3555, 127)
 
 [node name="MarioGame" type="Node2D"]
+scale = Vector2(0.998522, 1)
 script = ExtResource("1_4mp50")
 koopa_scene = ExtResource("2_2mb6o")
 
 [node name="marioscorecount" type="CanvasLayer" parent="."]
 
-[node name="mariolabel" type="Label" parent="marioscorecount"]
-offset_right = 483.0
-offset_bottom = 142.0
+[node name="marioscorecount" type="Label" parent="marioscorecount"]
+offset_right = 236.0
+offset_bottom = 55.0
 text = "Score:"
 label_settings = SubResource("LabelSettings_fbopp")
 script = ExtResource("3_e23nj")
@@ -74,17 +75,18 @@ offset_left = 2.0
 offset_top = 4.0
 offset_right = 1148.0
 offset_bottom = 656.0
-scale = Vector2(2.86041, 2.86041)
+scale = Vector2(1.00303, 1.00099)
 texture = ExtResource("2_sy4ey")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Mario" type="CharacterBody2D" parent="."]
+position = Vector2(-185.274, -1006)
 script = ExtResource("3_ma6q8")
 
 [node name="Sprite2D" type="Sprite2D" parent="Mario"]
-position = Vector2(600.125, 1508.84)
-scale = Vector2(5.77083, 5.77083)
+position = Vector2(456.095, 1541.74)
+scale = Vector2(2.02229, 2.02229)
 texture = ExtResource("4_4d3ro")
 hframes = 8
 vframes = 2
@@ -101,11 +103,12 @@ libraries = {
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mario"]
-position = Vector2(598, 1461)
+position = Vector2(458.678, 1525)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_j6dkq")
 
 [node name="ShootingOrigin" type="Node2D" parent="Mario"]
-position = Vector2(598, 1259)
+position = Vector2(455.674, 1449)
 script = ExtResource("5_71ave")
 coin_scene = ExtResource("6_vp7om")
 

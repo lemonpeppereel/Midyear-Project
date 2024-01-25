@@ -4,7 +4,7 @@ extends CharacterBody2D
 @onready var animations = $AnimationPlayer
 @onready var animations2 = $idle
 
-const max_speed = 520
+const max_speed =520
 const accel = 1000
 const friction = 2000
 var input = Vector2.ZERO
@@ -42,5 +42,5 @@ func player_movement(delta):
 		velocity = velocity.limit_length(max_speed)
 	move_and_slide()	
 	
-	global_position = global_position.clamp(Vector2(-650,-600), Vector2(2250,2300))
+	global_position = global_position.clamp(Vector2(-500,-999), Vector2(700,750))
 	

@@ -4,17 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://bvqfo7dr3j3ah" path="res://images/koopatroopashell-pixilart.png" id="2_n0p7e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u3naw"]
-radius = 92.0
+radius = 50.0
 
 [node name="koopatroopa" type="Area2D"]
 script = ExtResource("1_7854f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(759, -113)
+position = Vector2(709, -69)
 shape = SubResource("CircleShape2D_u3naw")
 
 [node name="troopa" type="Sprite2D" parent="."]
-position = Vector2(762, -117)
+position = Vector2(710, -65)
+scale = Vector2(0.48, 0.48)
 texture = ExtResource("2_n0p7e")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
