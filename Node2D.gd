@@ -21,7 +21,7 @@ func _input(_event):
 	
 func _change_world():
 	random.randomize()
-	if MarioScore.score >= 100:
+	if Marioscorecount.score == 100:
 		if random.randi_range(0,7) == 0:
 			get_tree().change_scene_to_file("res://goku_game.tscn")
 		elif random.randi_range(0,7) == 1:
