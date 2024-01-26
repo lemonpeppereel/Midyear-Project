@@ -36,6 +36,4 @@ func _change_world():
 			get_tree().change_scene_to_file("res://spiderman.tscn")
 		elif random.randi_range(0,7) == 6:
 			get_tree().change_scene_to_file("res://samurai.tscn")
-			
-		
 
