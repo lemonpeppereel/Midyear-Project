@@ -1,5 +1,6 @@
 extends Node2D
 
+var score = 0
 
 var rng = RandomNumberGenerator.new()
 @export var koopa_scene: PackedScene

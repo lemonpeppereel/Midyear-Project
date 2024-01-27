@@ -21,6 +21,7 @@ MarioScore="*res://MarioScore.gd"
 Marioscorecount="*res://marioscorecount.gd"
 Coin="*res://Coin.gd"
 Koopatroopa="*res://koopatroopa.gd"
+Random="*res://random.gd"
 
 [display]
 
