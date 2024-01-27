@@ -1,6 +1,5 @@
 extends Node2D
 
-var score = 0
 
 var rng = RandomNumberGenerator.new()
 @export var koopa_scene: PackedScene
@@ -37,4 +36,6 @@ func _change_world():
 			get_tree().change_scene_to_file("res://spiderman.tscn")
 		elif random.randi_range(0,7) == 6:
 			get_tree().change_scene_to_file("res://samurai.tscn")
+			
+		
 

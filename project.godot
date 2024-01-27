@@ -20,8 +20,14 @@ config/icon="res://icon.svg"
 MarioScore="*res://MarioScore.gd"
 Marioscorecount="*res://marioscorecount.gd"
 Coin="*res://Coin.gd"
+<<<<<<< HEAD
 Koopatroopa="*res://koopatroopa.gd"
+<<<<<<< HEAD
 Random="*res://random.gd"
+=======
+>>>>>>> parent of cab7b16 (made a catcher for koopa troopa (doesn't work))
+=======
+>>>>>>> parent of b8b8ddd (reverting to before (don't look))
 
 [display]
 

@@ -1,14 +1,36 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 [gd_scene load_steps=15 format=3 uid="uid://ovwppidem4ym"]
+=======
+[gd_scene load_steps=16 format=3 uid="uid://ovwppidem4ym"]
+>>>>>>> parent of cab7b16 (made a catcher for koopa troopa (doesn't work))
+=======
+[gd_scene load_steps=18 format=3 uid="uid://ovwppidem4ym"]
+>>>>>>> parent of b8b8ddd (reverting to before (don't look))
 
 [ext_resource type="Script" path="res://Node2D.gd" id="1_4mp50"]
 [ext_resource type="PackedScene" uid="uid://cwrx1tuuyou7k" path="res://koopatroopa.tscn" id="2_2mb6o"]
 [ext_resource type="Texture2D" uid="uid://dfdsuwgjbmx1t" path="res://images/mariobgtest.jpeg" id="2_sy4ey"]
+[ext_resource type="Script" path="res://marioscorecount.gd" id="3_e23nj"]
 [ext_resource type="Script" path="res://Mario.gd" id="3_ma6q8"]
 [ext_resource type="Texture2D" uid="uid://b77vmmuth38t8" path="res://images/mario-sprite.png" id="4_4d3ro"]
 [ext_resource type="Script" path="res://shooting.gd" id="5_71ave"]
 [ext_resource type="PackedScene" uid="uid://ngjvfrs21wsp" path="res://coin.tscn" id="6_vp7om"]
 [ext_resource type="AudioStream" uid="uid://bv871grun77cw" path="res://MarioTheme.mp3" id="7_ngy1d"]
+<<<<<<< HEAD
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://Marioscore.gd" id="9_uu6s1"]
+=======
+
+[sub_resource type="LabelSettings" id="LabelSettings_fbopp"]
+font_size = 40
+>>>>>>> parent of cab7b16 (made a catcher for koopa troopa (doesn't work))
+=======
+[ext_resource type="Script" path="res://MarioCatcher.gd" id="10_yceiw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fbopp"]
+font_size = 40
+>>>>>>> parent of b8b8ddd (reverting to before (don't look))
 
 [sub_resource type="Animation" id="Animation_fqvxo"]
 resource_name = "shoot"
@@ -53,10 +75,22 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6dkq"]
 size = Vector2(71.3555, 127)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_876h7"]
+size = Vector2(1176.72, 231)
+
 [node name="MarioGame" type="Node2D"]
 scale = Vector2(0.998522, 1)
 script = ExtResource("1_4mp50")
 koopa_scene = ExtResource("2_2mb6o")
+
+[node name="marioscorecount" type="CanvasLayer" parent="."]
+
+[node name="enemiesleft" type="Label" parent="marioscorecount"]
+offset_right = 236.0
+offset_bottom = 55.0
+text = "Score:"
+label_settings = SubResource("LabelSettings_fbopp")
+script = ExtResource("3_e23nj")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 2.0
@@ -103,10 +137,23 @@ coin_scene = ExtResource("6_vp7om")
 stream = ExtResource("7_ngy1d")
 volume_db = 0.8
 autoplay = true
+<<<<<<< HEAD
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("10_yceiw")
 
+<<<<<<< HEAD
 [node name="score" type="Label" parent="CanvasLayer"]
 offset_right = 40.0
 offset_bottom = 23.0
 script = ExtResource("9_uu6s1")
+=======
+>>>>>>> parent of cab7b16 (made a catcher for koopa troopa (doesn't work))
+=======
+[node name="KoopaCatcher" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(574.85, 306)
+shape = SubResource("RectangleShape2D_876h7")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+>>>>>>> parent of b8b8ddd (reverting to before (don't look))
