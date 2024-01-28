@@ -1,12 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://drp6ry6s7tjim"]
+[gd_scene load_steps=5 format=3 uid="uid://drp6ry6s7tjim"]
 
 [ext_resource type="Texture2D" uid="uid://c2g83k01kb3sj" path="res://images/1MandoBG.png" id="1_1cboc"]
+[ext_resource type="Script" path="res://mando.gd" id="1_il38n"]
 [ext_resource type="Texture2D" uid="uid://b37lj3kqfuavk" path="res://images/1Mandalorian.png" id="2_sxaw1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j1up3"]
 size = Vector2(128, 161)
 
 [node name="Mando" type="Node2D"]
+script = ExtResource("1_il38n")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1280.0
@@ -23,3 +25,12 @@ texture = ExtResource("2_sxaw1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MandoChar"]
 position = Vector2(1078, 399.5)
 shape = SubResource("RectangleShape2D_j1up3")
+
+[node name="back" type="Button" parent="."]
+offset_left = 919.0
+offset_top = 23.0
+offset_right = 1108.0
+offset_bottom = 100.0
+text = "BACK"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
