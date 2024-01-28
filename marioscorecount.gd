@@ -1,5 +1,7 @@
 extends Label
 
+class_name ScoreMario
+
 var score = 0
 
 func _ready():

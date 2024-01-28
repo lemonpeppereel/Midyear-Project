@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name MarioShoot
+
 @export var coin_scene: PackedScene
 
 

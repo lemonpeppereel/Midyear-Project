@@ -1,10 +1,12 @@
 extends CharacterBody2D
 
+class_name Mario
+
 @export var yes  = 1 
 @onready var animations = $AnimationPlayer
 @onready var animations2 = $idle
 
-const max_speed =520
+const max_speed = 520
 const accel = 1000
 const friction = 2000
 var input = Vector2.ZERO
