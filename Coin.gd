@@ -6,7 +6,7 @@ var screensize = Vector2(1152,640)
 
 func _physics_process(delta):
 	global_position.y += -speed * delta
-	#coinshot()
+	#coinshot()blahblah
 
 #func coinshot():
 	#if Input.is_action_just_pressed("ui_up"):
