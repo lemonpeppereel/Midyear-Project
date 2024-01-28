@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [gd_scene load_steps=15 format=3 uid="uid://ovwppidem4ym"]
 =======
 [gd_scene load_steps=16 format=3 uid="uid://ovwppidem4ym"]
 >>>>>>> parent of cab7b16 (made a catcher for koopa troopa (doesn't work))
+=======
+[gd_scene load_steps=18 format=3 uid="uid://ovwppidem4ym"]
+>>>>>>> parent of b8b8ddd (reverting to before (don't look))
 =======
 [gd_scene load_steps=18 format=3 uid="uid://ovwppidem4ym"]
 >>>>>>> parent of b8b8ddd (reverting to before (don't look))
@@ -19,6 +23,7 @@
 [ext_resource type="AudioStream" uid="uid://bv871grun77cw" path="res://MarioTheme.mp3" id="7_ngy1d"]
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 [ext_resource type="Script" path="res://Marioscore.gd" id="9_uu6s1"]
 =======
 
@@ -26,10 +31,15 @@
 font_size = 40
 >>>>>>> parent of cab7b16 (made a catcher for koopa troopa (doesn't work))
 =======
+=======
+>>>>>>> parent of b8b8ddd (reverting to before (don't look))
 [ext_resource type="Script" path="res://MarioCatcher.gd" id="10_yceiw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fbopp"]
 font_size = 40
+<<<<<<< HEAD
+>>>>>>> parent of b8b8ddd (reverting to before (don't look))
+=======
 >>>>>>> parent of b8b8ddd (reverting to before (don't look))
 
 [sub_resource type="Animation" id="Animation_fqvxo"]
@@ -143,6 +153,7 @@ autoplay = true
 script = ExtResource("10_yceiw")
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 [node name="score" type="Label" parent="CanvasLayer"]
 offset_right = 40.0
 offset_bottom = 23.0
@@ -150,10 +161,15 @@ script = ExtResource("9_uu6s1")
 =======
 >>>>>>> parent of cab7b16 (made a catcher for koopa troopa (doesn't work))
 =======
+=======
+>>>>>>> parent of b8b8ddd (reverting to before (don't look))
 [node name="KoopaCatcher" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(574.85, 306)
 shape = SubResource("RectangleShape2D_876h7")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+<<<<<<< HEAD
+>>>>>>> parent of b8b8ddd (reverting to before (don't look))
+=======
 >>>>>>> parent of b8b8ddd (reverting to before (don't look))
