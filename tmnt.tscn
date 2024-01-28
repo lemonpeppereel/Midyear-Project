@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://co7ylw1ch7v27"]
 
 [ext_resource type="Script" path="res://tmnt.gd" id="1_1g307"]
-[ext_resource type="Texture2D" uid="uid://cyf6tfwhhn7qr" path="res://images/TMNTBackground.jpeg" id="1_6aqru"]
+[ext_resource type="Texture2D" uid="uid://cyf6tfwhhn7qr" path="res://images/1TMNTBackground.jpeg" id="1_6aqru"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_v2elp"]
 [ext_resource type="Texture2D" uid="uid://cntnj3iarca68" path="res://images/1TeenMutantNinjaTurtles.png" id="3_o1g6e"]
 [ext_resource type="Script" path="res://ShootingOrigintmnt.gd" id="5_i2hpd"]

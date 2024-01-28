@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1c5jnkkyhf5g"]
+
+[ext_resource type="Texture2D" uid="uid://ljpuc1gjjor4" path="res://images/1ThorBG.png" id="1_xr0ig"]
+[ext_resource type="Texture2D" uid="uid://b05wgipdo6o1s" path="res://images/1Thor.png" id="2_klqur"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eq4wp"]
+size = Vector2(146, 185)
+
+[node name="thorgame" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1205.0
+offset_bottom = 655.0
+texture = ExtResource("1_xr0ig")
+expand_mode = 1
+
+[node name="thorChar" type="CharacterBody2D" parent="."]
+
+[node name="Thor" type="Sprite2D" parent="thorChar"]
+position = Vector2(325.5, 547.5)
+scale = Vector2(0.915, 0.915)
+texture = ExtResource("2_klqur")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="thorChar"]
+position = Vector2(333, 548)
+shape = SubResource("RectangleShape2D_eq4wp")

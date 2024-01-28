@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 MarioScore="*res://MarioScore.gd"
 Marioscorecount="*res://marioscorecount.gd"
-Coin="*res://Coin.gd"
+Coin="*res://coin.gd"
 Koopatroopa="*res://koopatroopa.gd"
 
 [display]
