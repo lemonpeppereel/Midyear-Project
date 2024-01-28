@@ -6,27 +6,28 @@
 [ext_resource type="AudioStream" uid="uid://d3tvgredtr4p7" path="res://HaloTheme.mp3" id="4_arej8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqcik"]
-size = Vector2(174.5, 203)
+size = Vector2(110, 163.75)
 
 [node name="halo" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 3.0
-offset_top = -353.0
-offset_right = 1923.0
+offset_top = -10.0
+offset_right = 1168.0
 offset_bottom = 691.0
 texture = ExtResource("1_iqpv7")
+expand_mode = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("2_i114q")
 
 [node name="1MasterChief" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(99, 534)
-scale = Vector2(2.04, 2.04)
+position = Vector2(71.5, 435.5)
+scale = Vector2(1.59, 1.59)
 texture = ExtResource("3_2605j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(108, 535)
+position = Vector2(72, 435.125)
 shape = SubResource("RectangleShape2D_xqcik")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

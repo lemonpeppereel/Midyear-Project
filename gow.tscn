@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://ban83ma6datsc"]
+
+[ext_resource type="Texture2D" uid="uid://o56131m0xrq7" path="res://images/1GOWBG.png" id="1_5cxes"]
+[ext_resource type="Texture2D" uid="uid://cp1ub374n0k3w" path="res://images/1Kratos.png" id="2_jwl3d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5rcfc"]
+size = Vector2(161, 166)
+
+[node name="GOW" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 4.0
+offset_right = 1281.0
+offset_bottom = 646.0
+texture = ExtResource("1_5cxes")
+expand_mode = 1
+
+[node name="GOWChar" type="CharacterBody2D" parent="."]
+
+[node name="Kratos" type="Sprite2D" parent="GOWChar"]
+position = Vector2(356.5, 542.5)
+scale = Vector2(0.915, 0.915)
+texture = ExtResource("2_jwl3d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GOWChar"]
+position = Vector2(352.5, 542)
+shape = SubResource("RectangleShape2D_5rcfc")

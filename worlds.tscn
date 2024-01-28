@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvvypis08g5j1"]
 
-[ext_resource type="Texture2D" uid="uid://dmeupsqwcqmtd" path="res://images/Screen Shot 2024-01-19 at 6.43.42 PM.png" id="1_gc8vf"]
+[ext_resource type="Texture2D" uid="uid://dmeupsqwcqmtd" path="res://images/Portal.png" id="1_gc8vf"]
 [ext_resource type="Script" path="res://mariochange.gd" id="2_v7mea"]
 
 [node name="Worlds" type="Control"]

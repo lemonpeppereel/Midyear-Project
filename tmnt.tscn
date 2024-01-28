@@ -9,30 +9,31 @@
 [ext_resource type="PackedScene" uid="uid://b7kulhc4ruef2" path="res://pizza.tscn" id="6_0jfrn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_opwjy"]
-size = Vector2(394.25, 467)
+size = Vector2(166.562, 198)
 
 [node name="tmnt" type="Node2D"]
 script = ExtResource("1_1g307")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 3288.0
-offset_bottom = 1850.0
+offset_right = 1157.0
+offset_bottom = 651.0
 texture = ExtResource("1_6aqru")
+expand_mode = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("2_v2elp")
 
 [node name="1TeenMutantNinjaTurtles" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(203, 1027)
-scale = Vector2(2.41, 2.41)
+position = Vector2(87, 389)
+scale = Vector2(0.935, 0.935)
 texture = ExtResource("3_o1g6e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(212.125, 1035)
+position = Vector2(94, 394)
 shape = SubResource("RectangleShape2D_opwjy")
 
 [node name="ShootingOrigintmnt" type="Node2D" parent="CharacterBody2D"]
-position = Vector2(484, 1016)
+position = Vector2(198, 381)
 script = ExtResource("5_i2hpd")
 pizza_scene = ExtResource("6_0jfrn")
 

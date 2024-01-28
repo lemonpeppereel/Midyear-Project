@@ -6,26 +6,27 @@
 [ext_resource type="AudioStream" uid="uid://8usil75rx4cw" path="res://SamuraiTheme.mp3" id="4_ru2pq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_daase"]
-size = Vector2(424.25, 620.5)
+size = Vector2(122.906, 161)
 
 [node name="Samurai" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_top = -1531.0
-offset_right = 3840.0
-offset_bottom = 2309.0
+offset_top = -5.0
+offset_right = 1141.0
+offset_bottom = 675.0
 texture = ExtResource("1_a8vsb")
+expand_mode = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("2_d17wv")
 
 [node name="1Samurai" type="Sprite2D" parent="CharacterBody2D"]
-position = Vector2(699, 940)
-scale = Vector2(2.61, 2.61)
+position = Vector2(251, 535)
+scale = Vector2(0.825, 0.825)
 texture = ExtResource("2_tmcn2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(699.875, 942.25)
+position = Vector2(244.453, 534.5)
 shape = SubResource("RectangleShape2D_daase")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

@@ -2,6 +2,7 @@ extends Node2D
 
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://menu.tscn")
+	Marioscorecount.score = 0;
 	
 var rng = RandomNumberGenerator.new()
 @export var fighter_scene: PackedScene
@@ -24,20 +25,22 @@ func _input(_event):
 	
 func _change_world():
 	random.randomize()
-	if random.randi_range(0,7) == 0:
+	if random.randi_range(0,8) == 0:
 		get_tree().change_scene_to_file("res://goku_game.tscn")
-	elif random.randi_range(0,7) == 1:
+	elif random.randi_range(0,8) == 1:
 		get_tree().change_scene_to_file("res://halo.tscn")
-	elif random.randi_range(0,7) == 2:
+	elif random.randi_range(0,8) == 2:
 		get_tree().change_scene_to_file("res://tmnt.tscn")
-	elif random.randi_range(0,7) == 3:
+	elif random.randi_range(0,8) == 3:
 		get_tree().change_scene_to_file("res://streetfighter.tscn")
-	elif random.randi_range(0,7) == 4:
+	elif random.randi_range(0,8) == 4:
 		get_tree().change_scene_to_file("res://MarioGame.tscn")
-	elif random.randi_range(0,7) == 5:
+	elif random.randi_range(0,8) == 5:
 		get_tree().change_scene_to_file("res://spiderman.tscn")
-	elif random.randi_range(0,7) == 6:
+	elif random.randi_range(0,8) == 6:
 		get_tree().change_scene_to_file("res://samurai.tscn")
+	elif random.randi_range(0,8) == 7:
+		get_tree().change_scene_to_file("res://batman_game.tscn")
 				
 			
 

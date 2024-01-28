@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpw2mn7takcoa"]
+
+[ext_resource type="Texture2D" uid="uid://oac0fo6ka2el" path="res://images/1Witcher3BG.jpeg" id="1_ihomk"]
+[ext_resource type="Texture2D" uid="uid://cdhioudrxbehx" path="res://images/1Geralt.png" id="2_iqvne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahp71"]
+size = Vector2(111, 224)
+
+[node name="Witcher3" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ihomk")
+
+[node name="WitchCharacter" type="CharacterBody2D" parent="."]
+
+[node name="Geralt" type="Sprite2D" parent="WitchCharacter"]
+position = Vector2(1082, 421)
+scale = Vector2(1.13, 1.13)
+texture = ExtResource("2_iqvne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WitchCharacter"]
+position = Vector2(1082, 426)
+shape = SubResource("RectangleShape2D_ahp71")

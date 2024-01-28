@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://4na0b5scvtsg" path="res://streetfightTheme.mp3" id="4_wvqr5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pyurv"]
-size = Vector2(144, 196)
+size = Vector2(92, 167.5)
 
 [node name="streetfighter" type="Node2D"]
 
@@ -20,11 +20,12 @@ texture = ExtResource("1_ra3an")
 script = ExtResource("2_agdgg")
 
 [node name="1ActualRyu" type="Sprite2D" parent="Ryu"]
-position = Vector2(256, 465)
+position = Vector2(322, 477)
+scale = Vector2(0.87, 0.87)
 texture = ExtResource("3_30kci")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ryu"]
-position = Vector2(249, 467)
+position = Vector2(321, 477.75)
 shape = SubResource("RectangleShape2D_pyurv")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

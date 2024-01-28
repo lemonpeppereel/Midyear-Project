@@ -1,20 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://qy63agnwl5ht"]
+[gd_scene load_steps=6 format=3 uid="uid://qy63agnwl5ht"]
 
 [ext_resource type="Script" path="res://batman_game.gd" id="1_4fh10"]
 [ext_resource type="Texture2D" uid="uid://85oqtm64nk4m" path="res://images/1BatmanBG.jpeg" id="2_1k5kl"]
+[ext_resource type="Script" path="res://Batman.gd" id="3_it0vc"]
 [ext_resource type="Texture2D" uid="uid://bbuqp0oidso24" path="res://images/1Batman.png" id="3_u5u65"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_me0r2"]
+size = Vector2(119, 218)
 
 [node name="batman_game" type="Node2D"]
 script = ExtResource("1_4fh10")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 1156.0
-offset_bottom = 640.0
+offset_right = 1148.0
+offset_bottom = 655.0
 texture = ExtResource("2_1k5kl")
+expand_mode = 1
 
 [node name="Batman" type="CharacterBody2D" parent="."]
+script = ExtResource("3_it0vc")
 
 [node name="Sprite2D" type="Sprite2D" parent="Batman"]
-position = Vector2(1304, 1374)
-scale = Vector2(3.48, 3.34)
+position = Vector2(238, 536)
+scale = Vector2(1.585, 1.52124)
 texture = ExtResource("3_u5u65")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Batman"]
+position = Vector2(254, 533)
+shape = SubResource("RectangleShape2D_me0r2")
