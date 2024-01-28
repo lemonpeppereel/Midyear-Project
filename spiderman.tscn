@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://daugpyxmdwrky"]
 
 [ext_resource type="Script" path="res://spiderman.gd" id="1_2378g"]
-[ext_resource type="Texture2D" uid="uid://oei2ij5iqp4q" path="res://images/Spiderman2099BackGround.jpeg" id="2_imh0x"]
+[ext_resource type="Texture2D" uid="uid://dlcxiki7o17m" path="res://images/1SpiderVerseBG.png" id="2_lbc1e"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="3_dcumr"]
 [ext_resource type="Texture2D" uid="uid://xynk542shi0u" path="res://images/1SpiderMan2099.png" id="4_dnydk"]
 [ext_resource type="AudioStream" uid="uid://dhe52u5jcldim" path="res://spdtheme.mp3" id="5_bqpht"]
@@ -15,7 +15,8 @@ script = ExtResource("1_2378g")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1114.0
 offset_bottom = 624.0
-texture = ExtResource("2_imh0x")
+texture = ExtResource("2_lbc1e")
+expand_mode = 1
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 script = ExtResource("3_dcumr")

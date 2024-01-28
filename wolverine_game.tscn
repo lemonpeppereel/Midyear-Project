@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg78ma0njd6f"]
+
+[ext_resource type="Texture2D" uid="uid://dmde4tpjb1nc6" path="res://images/1WolverineBG.jpeg" id="1_pnctc"]
+[ext_resource type="Texture2D" uid="uid://dlg358jc58p41" path="res://images/1Wolverine.png" id="2_ex60r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xmfn2"]
+size = Vector2(209.5, 194)
+
+[node name="WolverineGame" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1364.0
+offset_bottom = 666.0
+texture = ExtResource("1_pnctc")
+expand_mode = 1
+
+[node name="WolverineChar" type="CharacterBody2D" parent="."]
+
+[node name="Wolverine" type="Sprite2D" parent="WolverineChar"]
+position = Vector2(148, 402)
+texture = ExtResource("2_ex60r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WolverineChar"]
+position = Vector2(141.75, 416)
+shape = SubResource("RectangleShape2D_xmfn2")

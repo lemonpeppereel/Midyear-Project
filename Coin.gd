@@ -13,7 +13,7 @@ func _physics_process(delta):
 		#animations.play("coinanimation")
 		
 func _on_area_entered(area):
-	Marioscorecount.remove_enemy(10)
-	Marioscorecount.updatescore()
 	if area is Koopatroopa:
 		area.queue_free()
+		Marioscorecount.remove_enemy(10)
+		Marioscorecount.updatescore()
