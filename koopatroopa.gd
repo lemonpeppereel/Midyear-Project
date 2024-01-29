@@ -10,4 +10,8 @@ func _physics_process(delta):
 func _on_area_entered(area):
 	if area is Coin:
 		area.queue_free()
+	else:
+		Marioscorecount.remove_enemy(-10)
+		Marioscorecount.updatescore()
+		
 

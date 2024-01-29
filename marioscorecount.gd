@@ -9,8 +9,11 @@ func _ready():
 
 func remove_enemy(value):
 	score+=value
+	if score<=0:
+		get_tree().change_scene_to_file("res://menu.tscn")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func updatescore():
 	self.text = "Score: " + str(score)
-	print(score)
+	if score>= 0:
+		print(score)
