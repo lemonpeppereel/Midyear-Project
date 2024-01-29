@@ -21,6 +21,7 @@ MarioScore="*res://MarioScore.gd"
 Marioscorecount="*res://marioscorecount.gd"
 Coin="*res://coin.gd"
 Koopatroopa="*res://koopatroopa.gd"
+mariogame="*res://MarioGame.tscn"
 
 [display]
 
