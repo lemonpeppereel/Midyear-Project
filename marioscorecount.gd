@@ -15,5 +15,5 @@ func add_score(add:int):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func updatescore():
 	self.text = "Score: " + str(score)
-	if score >= 0:
+	if score>= 0:
 		print(score)
