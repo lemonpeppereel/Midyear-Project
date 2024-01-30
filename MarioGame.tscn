@@ -72,11 +72,9 @@ koopa_scene = ExtResource("2_2mb6o")
 [node name="marioscorecount" type="CanvasLayer" parent="."]
 
 [node name="score" type="Label" parent="marioscorecount"]
-offset_left = 12.0
-offset_top = 13.0
-offset_right = 284.0
-offset_bottom = 79.0
-text = "Score: "
+offset_right = 236.0
+offset_bottom = 55.0
+text = "Score:"
 label_settings = SubResource("LabelSettings_fbopp")
 script = ExtResource("3_e23nj")
 

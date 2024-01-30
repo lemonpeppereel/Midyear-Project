@@ -15,5 +15,5 @@ func _physics_process(delta):
 func _on_area_entered(area):
 	if area is Koopatroopa:
 		area.queue_free()
-		Marioscorecount.add_score(10)
+		Marioscorecount.remove_enemy(10)
 		Marioscorecount.updatescore()

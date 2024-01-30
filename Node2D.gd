@@ -18,8 +18,8 @@ func _input(_event):
 		if rng.randi_range(0,17) == 1:
 			var koopa = koopa_scene.instantiate()
 			koopa.position.x = randi_range(-600, 400)
-			get_tree().root.get_node("mariogame").add_child(koopa)
-
+			get_tree().root.get_node("MarioGame").add_child(koopa)
+	
 func _change_world():
 	random.randomize()
 	if Marioscorecount.score >= 100:

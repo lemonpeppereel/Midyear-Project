@@ -7,8 +7,8 @@ var score = 0
 func _ready():
 	self.text = "Score: " + str(score)
 
-func add_score(add:int):
-	score+=add
+func remove_enemy(value):
+	score+=value
 	if score<0:
 		get_tree().change_scene_to_file("res://menu.tscn")
 	
