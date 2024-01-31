@@ -26,6 +26,7 @@ tmntpizza="*res://Pizza.gd"
 StarWarsScoreCount="*res://StarWarsScoreCount.gd"
 Gokuscorecount="*res://gokuscorecount.gd"
 Gowscorecount="*res://gowscorecount.gd"
+Darksaber="*res://darksaber.gd"
 
 [display]
 
