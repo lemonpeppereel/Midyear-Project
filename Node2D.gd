@@ -9,8 +9,9 @@ var random = RandomNumberGenerator.new()
 
 @onready var koopascene = preload("res://koopatroopa.tscn")
 
-"""func _process(delta):
+func _process(delta):
 	if Input.is_action_pressed("ui_down"):
+		change_worldselec()
 		#_change_world()"""
 		
 func _input(_event):
@@ -19,7 +20,11 @@ func _input(_event):
 			var koopa = koopa_scene.instantiate()
 			koopa.position.x = randi_range(-600, 400)
 			get_tree().root.get_node("MarioGame").add_child(koopa)
-	
+			
+func change_worldselec():
+		if Marioscorecount.score >= 100:
+			get_tree().change_scene_to_file("res://worldselect.tscn")
+		
 """func _change_world():
 	random.randomize()
 	if Marioscorecount.score >= 100:
