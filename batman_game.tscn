@@ -1,15 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://qy63agnwl5ht"]
+[gd_scene load_steps=10 format=3 uid="uid://qy63agnwl5ht"]
 
 [ext_resource type="Script" path="res://batman_game.gd" id="1_4fh10"]
 [ext_resource type="Texture2D" uid="uid://85oqtm64nk4m" path="res://images/1BatmanBG.jpeg" id="2_1k5kl"]
+[ext_resource type="PackedScene" uid="uid://didy8idjm0rex" path="res://batmanenemy.tscn" id="2_ul5j0"]
 [ext_resource type="Script" path="res://Batman.gd" id="3_it0vc"]
 [ext_resource type="Texture2D" uid="uid://bbuqp0oidso24" path="res://images/1Batman.png" id="3_u5u65"]
+[ext_resource type="Script" path="res://bshootingorigin.gd" id="6_svpca"]
+[ext_resource type="AudioStream" uid="uid://0iha6fuujiuk" path="res://BatmanAudio.mp3" id="6_syh5f"]
+[ext_resource type="PackedScene" uid="uid://bh70ak0d58gty" path="res://batmanbullet.tscn" id="7_hayxe"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_me0r2"]
 size = Vector2(119, 218)
 
 [node name="batman_game" type="Node2D"]
 script = ExtResource("1_4fh10")
+batmanenemy_scene = ExtResource("2_ul5j0")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1148.0
@@ -29,11 +34,20 @@ texture = ExtResource("3_u5u65")
 position = Vector2(254, 533)
 shape = SubResource("RectangleShape2D_me0r2")
 
+[node name="bshootingorigin" type="Node2D" parent="Batman"]
+script = ExtResource("6_svpca")
+batwing_scene = ExtResource("7_hayxe")
+
 [node name="Button" type="Button" parent="."]
 offset_left = 918.0
 offset_top = 17.0
 offset_right = 1132.0
 offset_bottom = 113.0
 text = "BACK"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_syh5f")
+volume_db = 0.8
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

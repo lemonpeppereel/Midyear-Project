@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpukkohk6jye6"]
+
+[ext_resource type="Script" path="res://haloenemy.gd" id="1_sg3um"]
+[ext_resource type="Texture2D" uid="uid://df5yobwa0meis" path="res://1HaloEnemy (1).png" id="2_g8mvu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_er7ui"]
+size = Vector2(120, 159)
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_sg3um")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1201.5, 23.1347)
+scale = Vector2(0.294872, 0.294872)
+texture = ExtResource("2_g8mvu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1202, 22.4694)
+shape = SubResource("RectangleShape2D_er7ui")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

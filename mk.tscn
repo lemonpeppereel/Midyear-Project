@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bxbjw3lhjn5hm"]
+[gd_scene load_steps=10 format=3 uid="uid://bxbjw3lhjn5hm"]
 
 [ext_resource type="Script" path="res://mk.gd" id="1_2g8ln"]
 [ext_resource type="Texture2D" uid="uid://bbsdbu0k8dake" path="res://images/1MortalKombatBG.webp" id="1_e8i20"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://MKChar.gd" id="3_6sw4q"]
 [ext_resource type="Script" path="res://mkshootingorigin.gd" id="5_bla6q"]
 [ext_resource type="PackedScene" uid="uid://h1yty73sf7id" path="res://mkbullet.tscn" id="7_oqqci"]
+[ext_resource type="AudioStream" uid="uid://c0e2cx0qmv6sp" path="res://1MKTheme.mp3" id="8_o5xx3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2hk7w"]
 size = Vector2(110, 195)
@@ -43,5 +44,10 @@ offset_top = 10.0
 offset_right = 1141.0
 offset_bottom = 116.0
 text = "BACK"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_o5xx3")
+volume_db = 0.8
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

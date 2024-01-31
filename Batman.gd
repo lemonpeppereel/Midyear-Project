@@ -4,6 +4,7 @@ class_name Batman
 
 @export var yes  = 1 
 
+
 const max_speed = 520
 const accel = 1000
 const friction = 2000
@@ -11,9 +12,6 @@ var input = Vector2.ZERO
 
 func _physics_process(delta):
 	player_movement(delta)
-	#player_shoot()
-#func player_shoot():
-	#if Input.is_action_just_pressed("ui_up"):
 
 func get_input():
 	input.x = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
@@ -36,7 +34,6 @@ func player_movement(delta):
 	else: 
 		velocity += (input * accel * delta)
 		velocity = velocity.limit_length(max_speed)
-	move_and_slide()	
-	
+	move_and_slide()
 	global_position = global_position.clamp(Vector2(-450,-999), Vector2(700,750))
 	

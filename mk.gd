@@ -11,7 +11,7 @@ func _process(delta):
 		
 func _input(_event):
 		rng.randomize()
-		if rng.randi_range(0,9) == 1:
+		if rng.randi_range(0,13) == 1:
 			var mk = mk_scene.instantiate()
 			mk.position.x = randi_range(0, 1100)
 			get_tree().root.get_node("MK").add_child(mk)
@@ -28,12 +28,10 @@ func _change_world():
 			get_tree().change_scene_to_file("res://StarWars.tscn")
 		elif random.randi_range(0,9) == 5:
 			get_tree().change_scene_to_file("res://batman_game.tscn")
-		elif random.randi_range(0,9) == 6:
-			get_tree().change_scene_to_file("res://mando.tscn")
 		elif random.randi_range(0,9) == 7:
 			get_tree().change_scene_to_file("res://venom_game.tscn")
 		elif random.randi_range(0,9) == 8:
 			get_tree().change_scene_to_file("res://gow.tscn")
-
+		Mkscorescount.mkscore = 0
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://menu.tscn")

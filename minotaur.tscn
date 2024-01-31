@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://xlgcfj3foav2"]
 
 [ext_resource type="Script" path="res://Minotaur.gd" id="1_qmy06"]
-[ext_resource type="Texture2D" uid="uid://cvse7ij8mv2li" path="res://1Minotaur (1).png" id="2_s5bly"]
+[ext_resource type="Texture2D" uid="uid://cvse7ij8mv2li" path="res://images/1Minotaur (1).png" id="2_s5bly"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6100f"]
 size = Vector2(294, 216)

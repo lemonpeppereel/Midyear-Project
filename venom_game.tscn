@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://db4807ns2tcxn"]
+[gd_scene load_steps=10 format=3 uid="uid://db4807ns2tcxn"]
 
 [ext_resource type="Texture2D" uid="uid://ce75kfcd58a23" path="res://images/1VenomBG.png" id="1_grfc5"]
 [ext_resource type="Script" path="res://venom_game.gd" id="1_ug5ua"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://venomChar.gd" id="3_tb7ac"]
 [ext_resource type="Script" path="res://venomshootingorigin.gd" id="6_rsvf5"]
 [ext_resource type="PackedScene" uid="uid://c76atjpf2unv0" path="res://venombullet.tscn" id="7_annyr"]
+[ext_resource type="AudioStream" uid="uid://d14wuk6guys2g" path="res://1VenomTheme.mp3" id="8_u3oh0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n2j44"]
 size = Vector2(124, 186)
@@ -37,3 +38,8 @@ shape = SubResource("RectangleShape2D_n2j44")
 [node name="venomshootingorigin" type="Node2D" parent="venomChar"]
 script = ExtResource("6_rsvf5")
 venombullet_scene = ExtResource("7_annyr")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_u3oh0")
+volume_db = 0.8
+autoplay = true

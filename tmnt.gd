@@ -13,36 +13,28 @@ func _process(delta):
 		
 func _input(_event):
 		rng.randomize()
-		if rng.randi_range(0,17) == 1:
+		if rng.randi_range(0,14) == 1:
 			var shredder = shredder_scene.instantiate()
 			shredder.position.y = randi_range(0,600)
 			get_tree().root.get_node("tmnt").add_child(shredder)
 	
 func _change_world():
-	random.randomize()
-	if Marioscorecount.score >= 50:
-		if random.randi_range(0,15) == 0:
-			get_tree().change_scene_to_file("res://goku_game.tscn")
-		elif random.randi_range(0,15) == 1:
+	if Tmntscorecount.tmntscore >= 50:
+		if random.randi_range(0,9) == 1:
 			get_tree().change_scene_to_file("res://halo.tscn")
-		elif random.randi_range(0,15) == 3:
-			get_tree().change_scene_to_file("res://streetfighter.tscn")
-		elif random.randi_range(0,15) == 4:
-			get_tree().change_scene_to_file("res://StarWars.tscn")
-		elif random.randi_range(0,15) == 5:
-			get_tree().change_scene_to_file("res://spiderman.tscn")
-		elif random.randi_range(0,15) == 7:
-			get_tree().change_scene_to_file("res://batman_game.tscn")
-		elif random.randi_range(0,15) == 8:
+		elif random.randi_range(0,9) == 2:
 			get_tree().change_scene_to_file("res://mk.tscn")
-		elif random.randi_range(0,15) == 10:
+		elif random.randi_range(0,9) == 3:
+			get_tree().change_scene_to_file("res://streetfighter.tscn")
+		elif random.randi_range(0,9) == 4:
+			get_tree().change_scene_to_file("res://StarWars.tscn")
+		elif random.randi_range(0,9) == 5:
+			get_tree().change_scene_to_file("res://batman_game.tscn")
+		elif random.randi_range(0,9) == 6:
 			get_tree().change_scene_to_file("res://venom_game.tscn")
-		elif random.randi_range(0,15) == 12:
-			get_tree().change_scene_to_file("res://wolverine_game.tscn")
-		elif random.randi_range(0,15) == 13:
+		elif random.randi_range(0,9) == 8:
 			get_tree().change_scene_to_file("res://gow.tscn")
-		elif random.randi_range(0,15) == 14:
-			get_tree().change_scene_to_file("res://elden_ring.tscn")
+		Tmntscorecount.tmntscore = 0
 		
 
 func _on_back_pressed():

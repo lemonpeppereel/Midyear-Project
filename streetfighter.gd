@@ -13,48 +13,29 @@ func _process(delta):
 		
 func _input(_event):
 		rng.randomize()
-		if rng.randi_range(0,17) == 1:
+		if rng.randi_range(0,12) == 1:
 			var zangief = zangief_scene.instantiate()
 			zangief.position.x = randi_range(0, 500)
 			get_tree().root.get_node("streetfighter").add_child(zangief)
 	
-"""func _change_world():
-	random.randomize()
-	if Marioscorecount.score >= 100:
-		if random.randi_range(0,15) == 0:
-			get_tree().change_scene_to_file("res://goku_game.tscn")
-		elif random.randi_range(0,15) == 1:
-			get_tree().change_scene_to_file("res://halo.tscn")
-		elif random.randi_range(0,15) == 2:
-			get_tree().change_scene_to_file("res://tmnt.tscn")
-		elif random.randi_range(0,15) == 3:
-			get_tree().change_scene_to_file("res://streetfighter.tscn")
-		elif random.randi_range(0,15) == 4:
-			get_tree().change_scene_to_file("res://StarWars.tscn")
-		elif random.randi_range(0,15) == 5:
-			get_tree().change_scene_to_file("res://spiderman.tscn")
-		elif random.randi_range(0,15) == 6:
-			get_tree().change_scene_to_file("res://samurai.tscn")
-		elif random.randi_range(0,15) == 7:
-			get_tree().change_scene_to_file("res://batman_game.tscn")
-		elif random.randi_range(0,15) == 8:
-			get_tree().change_scene_to_file("res://mk.tscn")
-		elif random.randi_range(0,15) == 9:
-			get_tree().change_scene_to_file("res://mando.tscn")
-		elif random.randi_range(0,15) == 10:
-			get_tree().change_scene_to_file("res://venom_game.tscn")
-		elif random.randi_range(0,15) == 11:
-			get_tree().change_scene_to_file("res://witcher_3.tscn")
-		elif random.randi_range(0,15) == 12:
-			get_tree().change_scene_to_file("res://wolverine_game.tscn")
-		elif random.randi_range(0,15) == 13:
-			get_tree().change_scene_to_file("res://gow.tscn")
-		elif random.randi_range(0,15) == 14:
-			get_tree().change_scene_to_file("res://elden_ring.tscn") """
+
 func _change_world():
 	if Ryuscorecount.rscore >= 50:
-		get_tree().change_scene_to_file("res://worldselect.tscn")
-
+		if random.randi_range(0,9) == 1:
+			get_tree().change_scene_to_file("res://halo.tscn")
+		elif random.randi_range(0,9) == 2:
+			get_tree().change_scene_to_file("res://tmnt.tscn")
+		elif random.randi_range(0,9) == 3:
+			get_tree().change_scene_to_file("res://mk.tscn")
+		elif random.randi_range(0,9) == 4:
+			get_tree().change_scene_to_file("res://StarWars.tscn")
+		elif random.randi_range(0,9) == 5:
+			get_tree().change_scene_to_file("res://batman_game.tscn")
+		elif random.randi_range(0,9) == 7:
+			get_tree().change_scene_to_file("res://venom_game.tscn")
+		elif random.randi_range(0,9) == 8:
+			get_tree().change_scene_to_file("res://gow.tscn")
+		Ryuscorecount.rscore = 0
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://menu.tscn")
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dgo5ku6w54kfw"]
 
 [ext_resource type="Script" path="res://Vegeta.gd" id="1_t4ph5"]
-[ext_resource type="Texture2D" uid="uid://cacjkkpqmdmh5" path="res://1Vegeta (1).png" id="2_2d7ra"]
+[ext_resource type="Texture2D" uid="uid://cacjkkpqmdmh5" path="res://images/1Vegeta (1).png" id="2_2d7ra"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ncbb2"]
 size = Vector2(73, 186)

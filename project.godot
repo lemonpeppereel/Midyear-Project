@@ -35,6 +35,8 @@ Mkbullet="*res://mkbullet.gd"
 Mkenemy="*res://mkenemy.gd"
 Mkscorescount="*res://Mkscorescount.gd"
 FighterJet="*res://fighter_jet.gd"
+Batmanscorecount="*res://batmanscorecount.gd"
+Haloscorecount="*res://haloscorecount.gd"
 
 [display]
 

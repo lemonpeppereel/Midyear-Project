@@ -1,16 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://d237qel7gfh0q"]
+[gd_scene load_steps=10 format=3 uid="uid://d237qel7gfh0q"]
 
 [ext_resource type="Texture2D" uid="uid://dg1mw3hox4niy" path="res://images/HaloBgd.jpeg" id="1_iqpv7"]
 [ext_resource type="Script" path="res://halo.gd" id="1_s8ewb"]
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_i114q"]
+[ext_resource type="PackedScene" uid="uid://bpukkohk6jye6" path="res://haloenemy.tscn" id="2_sxxbw"]
 [ext_resource type="Texture2D" uid="uid://bxqls2u46gddi" path="res://images/1MasterChief.png" id="3_2605j"]
 [ext_resource type="AudioStream" uid="uid://d3tvgredtr4p7" path="res://HaloTheme.mp3" id="4_arej8"]
+[ext_resource type="Script" path="res://hshootingorigin.gd" id="6_t2aq4"]
+[ext_resource type="PackedScene" uid="uid://6jrfwood5j25" path="res://halobullet.tscn" id="7_itf6x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xqcik"]
 size = Vector2(110, 163.75)
 
 [node name="halo" type="Node2D"]
 script = ExtResource("1_s8ewb")
+henemy_scene = ExtResource("2_sxxbw")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = 3.0
@@ -31,6 +35,10 @@ texture = ExtResource("3_2605j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(72, 435.125)
 shape = SubResource("RectangleShape2D_xqcik")
+
+[node name="hshootingorigin" type="Node2D" parent="CharacterBody2D"]
+script = ExtResource("6_t2aq4")
+hbullet_scene = ExtResource("7_itf6x")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_arej8")

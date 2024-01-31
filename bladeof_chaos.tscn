@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://5jmvi8jqrekg"]
 
 [ext_resource type="Script" path="res://BladeofChaos.gd" id="1_txby8"]
-[ext_resource type="Texture2D" uid="uid://bywwjgpyrojl4" path="res://1BladesofChaos.png" id="2_82xd2"]
+[ext_resource type="Texture2D" uid="uid://bywwjgpyrojl4" path="res://images/1BladesofChaos.png" id="2_82xd2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tg7a6"]
 size = Vector2(66, 162.5)
