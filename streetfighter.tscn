@@ -13,9 +13,10 @@ size = Vector2(92, 167.5)
 script = ExtResource("1_m4x2d")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -40.0
-offset_right = 1160.0
-offset_bottom = 675.0
+offset_left = -16.0
+offset_top = -2.0
+offset_right = 1184.0
+offset_bottom = 673.0
 texture = ExtResource("1_ra3an")
 
 [node name="Ryu" type="CharacterBody2D" parent="."]
@@ -36,10 +37,10 @@ volume_db = 0.8
 autoplay = true
 
 [node name="Button" type="Button" parent="."]
-offset_left = 869.0
-offset_top = 15.0
-offset_right = 1138.0
-offset_bottom = 123.0
+offset_left = 860.0
+offset_top = 20.0
+offset_right = 1129.0
+offset_bottom = 128.0
 text = "BACK"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

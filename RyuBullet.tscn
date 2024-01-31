@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cawpe6aodsggs"]
+
+[ext_resource type="Script" path="res://RyuBullet.gd" id="1_348e3"]
+[ext_resource type="Texture2D" uid="uid://bx2if8c1758x5" path="res://images/1RyuBullet.png" id="2_yxfj6"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ckx5"]
+radius = 97.5
+height = 211.0
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_348e3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(197.25, 178)
+scale = Vector2(0.39557, 0.372917)
+texture = ExtResource("2_yxfj6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(196.5, 177.125)
+shape = SubResource("CapsuleShape2D_8ckx5")
