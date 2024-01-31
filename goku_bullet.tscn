@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://rtmfgnbdncuk"]
+
+[ext_resource type="Script" path="res://GokuBullet.gd" id="1_04rq5"]
+[ext_resource type="Texture2D" uid="uid://p6a0aqgiou6q" path="res://images/1GokuBullet.png" id="2_e1njh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3k0pu"]
+size = Vector2(102, 108)
+
+[node name="GokuBullet" type="Area2D"]
+script = ExtResource("1_04rq5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64.9591, 490)
+scale = Vector2(0.195918, 0.195918)
+texture = ExtResource("2_e1njh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(65.3263, 495)
+shape = SubResource("RectangleShape2D_3k0pu")

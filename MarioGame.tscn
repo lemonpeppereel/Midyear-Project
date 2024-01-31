@@ -98,7 +98,6 @@ scale = Vector2(2.02229, 2.02229)
 texture = ExtResource("4_4d3ro")
 hframes = 8
 vframes = 2
-frame = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Mario"]
 libraries = {

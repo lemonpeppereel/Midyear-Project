@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://5jmvi8jqrekg"]
+
+[ext_resource type="Script" path="res://BladeofChaos.gd" id="1_txby8"]
+[ext_resource type="Texture2D" uid="uid://bywwjgpyrojl4" path="res://1BladesofChaos.png" id="2_82xd2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tg7a6"]
+size = Vector2(66, 162.5)
+
+[node name="BladeofChaos" type="Area2D"]
+script = ExtResource("1_txby8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(336, 493.765)
+scale = Vector2(0.352941, 0.352941)
+texture = ExtResource("2_82xd2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(332, 495.75)
+shape = SubResource("RectangleShape2D_tg7a6")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

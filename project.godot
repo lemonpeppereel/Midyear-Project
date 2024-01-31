@@ -17,10 +17,15 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-MarioScore="*res://MarioScore.gd"
 Marioscorecount="*res://marioscorecount.gd"
 Coin="*res://coin.gd"
 Koopatroopa="*res://koopatroopa.gd"
+Tmntscorecount="*res://tmntscorecount.gd"
+shredder="*res://Shredder.gd"
+tmntpizza="*res://Pizza.gd"
+StarWarsScoreCount="*res://StarWarsScoreCount.gd"
+Gokuscorecount="*res://gokuscorecount.gd"
+Gowscorecount="*res://gowscorecount.gd"
 
 [display]
 

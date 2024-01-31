@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgo5ku6w54kfw"]
+
+[ext_resource type="Script" path="res://Vegeta.gd" id="1_t4ph5"]
+[ext_resource type="Texture2D" uid="uid://cacjkkpqmdmh5" path="res://1Vegeta (1).png" id="2_2d7ra"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ncbb2"]
+size = Vector2(73, 186)
+
+[node name="Vegeta" type="Area2D"]
+script = ExtResource("1_t4ph5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1198, 33)
+scale = Vector2(0.320988, 0.320988)
+texture = ExtResource("2_2d7ra")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1196.5, 34)
+shape = SubResource("RectangleShape2D_ncbb2")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

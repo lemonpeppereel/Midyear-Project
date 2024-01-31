@@ -6,4 +6,6 @@ func _physics_process(delta):
 	global_position.x += speed * delta
 		
 func _on_area_entered(area):
-	area.queue_free()
+		area.queue_free()
+		Tmntscorecount.remove_enemy(10)
+		Tmntscorecount.updatescore()

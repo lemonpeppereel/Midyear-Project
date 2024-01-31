@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://7xnt00ah7mxo"]
+
+[ext_resource type="Script" path="res://Shredder.gd" id="1_uvi4a"]
+[ext_resource type="Texture2D" uid="uid://6dkrw8vnjdei" path="res://images/shredder.png" id="2_koubc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b224x"]
+size = Vector2(148, 228)
+
+[node name="Shredder" type="Area2D"]
+script = ExtResource("1_uvi4a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1201, 39)
+scale = Vector2(0.359857, 0.359857)
+texture = ExtResource("2_koubc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1204, 40)
+shape = SubResource("RectangleShape2D_b224x")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
