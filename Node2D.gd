@@ -18,7 +18,7 @@ func _input(_event):
 		rng.randomize()
 		if rng.randi_range(0,9) == 1:
 			var koopa = koopa_scene.instantiate()
-			koopa.position.x = randi_range(0, 500)
+			koopa.position.x = randi_range(0, 1100)
 			get_tree().root.get_node("MarioGame").add_child(koopa)
 			
 func change_worldselec():

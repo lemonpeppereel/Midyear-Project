@@ -5,7 +5,7 @@ class_name Koopa
 @export var speed = 130
 
 func koopafall():
-		animations4.play("koopafall")
+	animations4.play("koopafall")
 		
 func _physics_process(delta):
 	global_position.y += speed * delta
@@ -17,6 +17,3 @@ func _on_area_entered(area):
 	else:
 		Marioscorecount.remove_enemy(-10)
 		Marioscorecount.updatescore()
-		
-		
-

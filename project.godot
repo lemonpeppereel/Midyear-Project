@@ -31,6 +31,10 @@ Ryuscorecount="*res://ryuscorecount.gd"
 Venombullet="*res://venombullet.gd"
 Carnage="*res://carnage.gd"
 Venomscorecount="*res://venomscorecount.gd"
+Mkbullet="*res://mkbullet.gd"
+Mkenemy="*res://mkenemy.gd"
+Mkscorescount="*res://Mkscorescount.gd"
+FighterJet="*res://fighter_jet.gd"
 
 [display]
 

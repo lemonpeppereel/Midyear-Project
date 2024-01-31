@@ -38,7 +38,7 @@ scale = Vector2(2.87708, 2.87708)
 shape = SubResource("RectangleShape2D_25ect")
 
 [node name="GShootingOrigin" type="Node2D" parent="goku"]
-position = Vector2(132.234, -1397.24)
+position = Vector2(120.212, -1447.34)
 script = ExtResource("5_r85ji")
 gokubullet_scene = ExtResource("6_x418o")
 
