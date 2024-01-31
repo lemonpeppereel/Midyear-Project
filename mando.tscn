@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://drp6ry6s7tjim"]
+[gd_scene load_steps=7 format=3 uid="uid://drp6ry6s7tjim"]
 
 [ext_resource type="Texture2D" uid="uid://c2g83k01kb3sj" path="res://images/1MandoBG.png" id="1_1cboc"]
 [ext_resource type="Script" path="res://mando.gd" id="1_il38n"]
 [ext_resource type="Texture2D" uid="uid://b37lj3kqfuavk" path="res://images/1Mandalorian.png" id="2_sxaw1"]
+[ext_resource type="Script" path="res://MandoChar.gd" id="3_ejirn"]
+[ext_resource type="Script" path="res://shootingoriginmando.gd" id="4_sii8w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j1up3"]
 size = Vector2(128, 161)
@@ -16,6 +18,7 @@ offset_bottom = 668.0
 texture = ExtResource("1_1cboc")
 
 [node name="MandoChar" type="CharacterBody2D" parent="."]
+script = ExtResource("3_ejirn")
 
 [node name="DjinDjarin" type="Sprite2D" parent="MandoChar"]
 position = Vector2(1080.5, 402.5)
@@ -25,6 +28,9 @@ texture = ExtResource("2_sxaw1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MandoChar"]
 position = Vector2(1078, 399.5)
 shape = SubResource("RectangleShape2D_j1up3")
+
+[node name="shootingoriginmando" type="Node2D" parent="MandoChar"]
+script = ExtResource("4_sii8w")
 
 [node name="back" type="Button" parent="."]
 offset_left = 919.0

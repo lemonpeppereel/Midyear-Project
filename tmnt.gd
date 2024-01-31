@@ -26,7 +26,7 @@ func _change_world():
 		elif random.randi_range(0,15) == 1:
 			get_tree().change_scene_to_file("res://halo.tscn")
 		elif random.randi_range(0,15) == 2:
-			get_tree().change_scene_to_file("res://tmnt.tscn")
+			get_tree().change_scene_to_file("res://MarioGame.tscn")
 		elif random.randi_range(0,15) == 3:
 			get_tree().change_scene_to_file("res://streetfighter.tscn")
 		elif random.randi_range(0,15) == 4:
@@ -53,7 +53,7 @@ func _change_world():
 			get_tree().change_scene_to_file("res://elden_ring.tscn")
 		
 
-func _on_button_pressed():
+func _on_back_pressed():
 	get_tree().change_scene_to_file("res://menu.tscn")
 
 
