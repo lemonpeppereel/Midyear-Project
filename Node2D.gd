@@ -9,15 +9,15 @@ var random = RandomNumberGenerator.new()
 
 @onready var koopascene = preload("res://koopatroopa.tscn")
 
-"""func _process(delta):
+func _process(delta):
 	if Input.is_action_pressed("ui_down"):
-		#_change_world()"""
+		_change_world()
 		
 func _input(_event):
 		rng.randomize()
-		if rng.randi_range(0,17) == 1:
+		if rng.randi_range(0,9) == 1:
 			var koopa = koopa_scene.instantiate()
-			koopa.position.x = randi_range(-600, 400)
+			koopa.position.x = randi_range(0, 500)
 			get_tree().root.get_node("MarioGame").add_child(koopa)
 	
 """func _change_world():
@@ -53,7 +53,10 @@ func _input(_event):
 			get_tree().change_scene_to_file("res://gow.tscn")
 		elif random.randi_range(0,15) == 14:
 			get_tree().change_scene_to_file("res://elden_ring.tscn") """
-		
+func _change_world():
+	if Marioscorecount.score >= 50:
+		get_tree().change_scene_to_file("res://worldselect.tscn")
 
 func _on_button_pressed():
 	get_tree().change_scene_to_file("res://menu.tscn")
+ 

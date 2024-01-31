@@ -1,16 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5leu8bgoh8ij"]
+[gd_scene load_steps=10 format=3 uid="uid://b5leu8bgoh8ij"]
 
 [ext_resource type="Script" path="res://streetfighter.gd" id="1_m4x2d"]
 [ext_resource type="Texture2D" uid="uid://62rhwg3fq0y6" path="res://images/streetfighterbackground.jpg" id="1_ra3an"]
+[ext_resource type="PackedScene" uid="uid://dcwepggrcy4wf" path="res://ryu_enemy.tscn" id="2_3dxs5"]
 [ext_resource type="Script" path="res://Ryu.gd" id="2_agdgg"]
 [ext_resource type="Texture2D" uid="uid://pmjowbcx7tul" path="res://images/1ActualRyu.png" id="3_30kci"]
 [ext_resource type="AudioStream" uid="uid://4na0b5scvtsg" path="res://streetfightTheme.mp3" id="4_wvqr5"]
+[ext_resource type="Script" path="res://RyuShootingOrigin.gd" id="5_dpvl6"]
+[ext_resource type="PackedScene" uid="uid://cawpe6aodsggs" path="res://RyuBullet.tscn" id="6_ixl54"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pyurv"]
 size = Vector2(92, 167.5)
 
 [node name="streetfighter" type="Node2D"]
 script = ExtResource("1_m4x2d")
+zangief_scene = ExtResource("2_3dxs5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -16.0
@@ -30,6 +34,10 @@ texture = ExtResource("3_30kci")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ryu"]
 position = Vector2(321, 477.75)
 shape = SubResource("RectangleShape2D_pyurv")
+
+[node name="RyuShootingOrigin" type="Node2D" parent="Ryu"]
+script = ExtResource("5_dpvl6")
+bullet_scene = ExtResource("6_ixl54")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_wvqr5")

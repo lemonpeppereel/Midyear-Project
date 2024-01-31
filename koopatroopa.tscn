@@ -30,11 +30,11 @@ _data = {
 script = ExtResource("1_7854f")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(709, -69)
+position = Vector2(59.9999, -68)
 shape = SubResource("CircleShape2D_u3naw")
 
 [node name="troopa" type="Sprite2D" parent="."]
-position = Vector2(710, -65)
+position = Vector2(61, -64)
 scale = Vector2(0.48, 0.48)
 texture = ExtResource("2_rk8sw")
 hframes = 6
