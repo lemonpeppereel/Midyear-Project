@@ -1,14 +1,13 @@
-extends Node2D
+extends Label
 
-class_name ScoreTmnt
+class_name ScoreRyu
 
-var tmntscore = 0
-
+var rscore = 0
 
 func remove_enemy(value):
-	tmntscore+=value
+	rscore+=value
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func updatescore():
-	if tmntscore >= 0:
-		print(tmntscore)
+	if rscore >= 0:
+		print(rscore)

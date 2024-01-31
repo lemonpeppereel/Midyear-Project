@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://ovwppidem4ym"]
+[gd_scene load_steps=18 format=3 uid="uid://ovwppidem4ym"]
 
 [ext_resource type="Script" path="res://Node2D.gd" id="1_4mp50"]
 [ext_resource type="PackedScene" uid="uid://cwrx1tuuyou7k" path="res://koopatroopa.tscn" id="2_2mb6o"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://ngjvfrs21wsp" path="res://coin.tscn" id="6_vp7om"]
 [ext_resource type="AudioStream" uid="uid://bv871grun77cw" path="res://MarioTheme.mp3" id="7_ngy1d"]
 [ext_resource type="Script" path="res://MarioCatcher.gd" id="10_yceiw"]
-[ext_resource type="Script" path="res://Area2D2.gd" id="11_rsjlv"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_fbopp"]
 font_size = 40
@@ -59,10 +58,7 @@ _data = {
 size = Vector2(71.3555, 127)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_876h7"]
-size = Vector2(1289.91, 69.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3nrx"]
-size = Vector2(1273.37, 86)
+size = Vector2(1120.66, 69.5)
 
 [node name="MarioGame" type="Node2D"]
 scale = Vector2(0.998522, 1)
@@ -128,15 +124,8 @@ autoplay = true
 script = ExtResource("10_yceiw")
 
 [node name="KoopaCatcher" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(587.869, 759)
+position = Vector2(573.848, 651)
 shape = SubResource("RectangleShape2D_876h7")
-
-[node name="Area2D2" type="Area2D" parent="."]
-script = ExtResource("11_rsjlv")
-
-[node name="CoinCatcher" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2(576.853, -196)
-shape = SubResource("RectangleShape2D_w3nrx")
 
 [node name="Button" type="Button" parent="."]
 offset_left = 945.0
@@ -147,5 +136,4 @@ text = "BACK"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
-[connection signal="area_entered" from="Area2D2" to="Area2D2" method="_on_area_entered"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -4,17 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://bx2if8c1758x5" path="res://images/1RyuBullet.png" id="2_yxfj6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ckx5"]
-radius = 97.5
-height = 211.0
+radius = 43.5
+height = 98.0
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource("1_348e3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(197.25, 178)
-scale = Vector2(0.39557, 0.372917)
+position = Vector2(310.75, 529.54)
+scale = Vector2(0.205696, 0.193917)
 texture = ExtResource("2_yxfj6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(196.5, 177.125)
+position = Vector2(310.5, 521.58)
 shape = SubResource("CapsuleShape2D_8ckx5")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

@@ -27,6 +27,7 @@ StarWarsScoreCount="*res://StarWarsScoreCount.gd"
 Gokuscorecount="*res://gokuscorecount.gd"
 Gowscorecount="*res://gowscorecount.gd"
 Darksaber="*res://darksaber.gd"
+Ryuscorecount="*res://ryuscorecount.gd"
 
 [display]
 
