@@ -12,12 +12,12 @@ position = Vector2(76, 0)
 script = ExtResource("1_48ecm")
 
 [node name="Forcepush" type="Sprite2D" parent="."]
-position = Vector2(290.5, 573.113)
+position = Vector2(355.5, 573.113)
 scale = Vector2(0.158064, 0.167957)
 texture = ExtResource("2_big6x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(291, 569.977)
+position = Vector2(356, 569.977)
 shape = SubResource("CapsuleShape2D_mtytw")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

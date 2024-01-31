@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://f6npcoxh7xxg"]
+
+[ext_resource type="Script" path="res://mkenemy.gd" id="1_2x4hm"]
+[ext_resource type="Texture2D" uid="uid://cxi70hpe6kco4" path="res://images/1LiuKang.png" id="2_3pf6k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gm2px"]
+size = Vector2(92, 132)
+
+[node name="mkenemy" type="Area2D"]
+script = ExtResource("1_2x4hm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(61.75, -67.5649)
+scale = Vector2(0.21201, 0.21201)
+texture = ExtResource("2_3pf6k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(62, -68)
+shape = SubResource("RectangleShape2D_gm2px")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

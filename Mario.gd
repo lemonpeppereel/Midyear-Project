@@ -42,7 +42,6 @@ func player_movement(delta):
 	else: 
 		velocity += (input * accel * delta)
 		velocity = velocity.limit_length(max_speed)
-	move_and_slide()	
-	
+	move_and_slide()
 	global_position = global_position.clamp(Vector2(-450,-999), Vector2(700,750))
 	

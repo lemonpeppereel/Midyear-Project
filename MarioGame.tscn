@@ -16,6 +16,7 @@ font_size = 40
 
 [sub_resource type="Animation" id="Animation_fqvxo"]
 resource_name = "shoot"
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -23,7 +24,7 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 4, 5, 6, 7]
@@ -94,7 +95,6 @@ scale = Vector2(2.02229, 2.02229)
 texture = ExtResource("4_4d3ro")
 hframes = 8
 vframes = 2
-frame = 8
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Mario"]
 libraries = {
@@ -124,7 +124,7 @@ autoplay = true
 script = ExtResource("10_yceiw")
 
 [node name="KoopaCatcher" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(573.848, 651)
+position = Vector2(577.854, 720)
 shape = SubResource("RectangleShape2D_876h7")
 
 [node name="Button" type="Button" parent="."]
