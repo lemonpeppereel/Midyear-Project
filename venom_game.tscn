@@ -1,12 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://db4807ns2tcxn"]
+[gd_scene load_steps=9 format=3 uid="uid://db4807ns2tcxn"]
 
 [ext_resource type="Texture2D" uid="uid://ce75kfcd58a23" path="res://images/1VenomBG.png" id="1_grfc5"]
+[ext_resource type="Script" path="res://venom_game.gd" id="1_ug5ua"]
+[ext_resource type="PackedScene" uid="uid://ckywlq5ubyyc" path="res://carnage.tscn" id="2_3fvkn"]
 [ext_resource type="Texture2D" uid="uid://can6r6pug1oyf" path="res://images/1Venom.png" id="2_qs3wx"]
+[ext_resource type="Script" path="res://venomChar.gd" id="3_tb7ac"]
+[ext_resource type="Script" path="res://venomshootingorigin.gd" id="6_rsvf5"]
+[ext_resource type="PackedScene" uid="uid://c76atjpf2unv0" path="res://venombullet.tscn" id="7_annyr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n2j44"]
 size = Vector2(124, 186)
 
 [node name="venom_game" type="Node2D"]
+script = ExtResource("1_ug5ua")
+carnage_scene = ExtResource("2_3fvkn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_top = -100.0
@@ -16,6 +23,7 @@ texture = ExtResource("1_grfc5")
 expand_mode = 1
 
 [node name="venomChar" type="CharacterBody2D" parent="."]
+script = ExtResource("3_tb7ac")
 
 [node name="Venom" type="Sprite2D" parent="venomChar"]
 position = Vector2(429.5, 545.5)
@@ -25,3 +33,7 @@ texture = ExtResource("2_qs3wx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="venomChar"]
 position = Vector2(428, 547)
 shape = SubResource("RectangleShape2D_n2j44")
+
+[node name="venomshootingorigin" type="Node2D" parent="venomChar"]
+script = ExtResource("6_rsvf5")
+venombullet_scene = ExtResource("7_annyr")

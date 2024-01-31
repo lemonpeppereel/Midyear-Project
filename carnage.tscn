@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckywlq5ubyyc"]
+
+[ext_resource type="Script" path="res://carnage.gd" id="1_7wqba"]
+[ext_resource type="Texture2D" uid="uid://c3yiam64kbxxv" path="res://images/1Carnage.png" id="2_3hrua"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6a3ja"]
+size = Vector2(178, 155)
+
+[node name="carnage" type="Area2D"]
+script = ExtResource("1_7wqba")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(112, -97)
+scale = Vector2(0.755814, 0.755814)
+texture = ExtResource("2_3hrua")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(113, -88.5)
+shape = SubResource("RectangleShape2D_6a3ja")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

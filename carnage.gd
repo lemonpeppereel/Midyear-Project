@@ -1,15 +1,12 @@
 extends Area2D
 
-class_name Vegeta
+class_name VenomEnemy
 
 @export var speed = 130
-
 		
 func _physics_process(delta):
-	global_position.x += speed * delta
-	
-	
+	global_position.y += speed * delta
 	
 func _on_area_entered(area):
-	area.queue_free()
-
+	if area is Venombullet:
+		area.queue_free()

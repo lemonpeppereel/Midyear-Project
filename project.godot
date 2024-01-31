@@ -28,6 +28,9 @@ Gokuscorecount="*res://gokuscorecount.gd"
 Gowscorecount="*res://gowscorecount.gd"
 Darksaber="*res://darksaber.gd"
 Ryuscorecount="*res://ryuscorecount.gd"
+Venombullet="*res://venombullet.gd"
+Carnage="*res://carnage.gd"
+Venomscorecount="*res://venomscorecount.gd"
 
 [display]
 

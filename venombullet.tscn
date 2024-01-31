@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c76atjpf2unv0"]
+
+[ext_resource type="Script" path="res://venombullet.gd" id="1_tvk7s"]
+[ext_resource type="Texture2D" uid="uid://bgtho8v11ccp3" path="res://images/1VenomWeapon.png" id="2_p3wnv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o0tqr"]
+radius = 20.0
+height = 46.0
+
+[node name="venombullet" type="Area2D"]
+script = ExtResource("1_tvk7s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(431, 483)
+scale = Vector2(0.310526, 0.310526)
+texture = ExtResource("2_p3wnv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(430, 483)
+shape = SubResource("CapsuleShape2D_o0tqr")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
