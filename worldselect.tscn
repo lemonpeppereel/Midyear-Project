@@ -20,10 +20,11 @@ grow_vertical = 2
 layout_mode = 0
 offset_right = 3181.0
 offset_bottom = 1762.0
-scale = Vector2(0.382112, 0.382112)
+scale = Vector2(0.367972, 0.367972)
 texture = ExtResource("1_jy0d2")
 
 [node name="starwarsbut" type="LinkButton" parent="TextureRect"]
+layout_mode = 0
 offset_left = 1640.88
 offset_top = 198.895
 offset_right = 2221.88
@@ -31,6 +32,7 @@ offset_bottom = 790.895
 script = ExtResource("2_epf7m")
 
 [node name="tnmtbut" type="LinkButton" parent="TextureRect"]
+layout_mode = 0
 offset_left = 2276.88
 offset_top = 159.895
 offset_right = 2928.88
@@ -38,24 +40,35 @@ offset_bottom = 797.895
 script = ExtResource("3_0a437")
 
 [node name="halobut" type="LinkButton" parent="TextureRect"]
+layout_mode = 0
 offset_left = 831.88
 offset_top = 1020.89
 offset_right = 1412.88
 offset_bottom = 1656.89
 script = ExtResource("4_kwd7i")
 
-[node name="spideybut" type="LinkButton" parent="TextureRect"]
+[node name="mkbtbut" type="LinkButton" parent="TextureRect"]
+offset_left = 787.88
+offset_top = 1707.89
+offset_right = 1372.88
+offset_bottom = 2564.89
+scale = Vector2(-1.26944, -0.890105)
+script = ExtResource("5_pwuko")
+
+[node name="venombut" type="LinkButton" parent="TextureRect"]
+layout_mode = 0
 offset_left = 1635.88
 offset_top = 1012.89
 offset_right = 2216.88
 offset_bottom = 1656.89
 script = ExtResource("5_pwuko")
 
-[node name="dbzbut" type="LinkButton" parent="TextureRect"]
-offset_left = 2381.88
-offset_top = 1001.89
-offset_right = 2962.88
-offset_bottom = 1666.89
+[node name="gowbut" type="LinkButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 2506.0
+offset_top = 992.0
+offset_right = 3088.0
+offset_bottom = 1685.0
 script = ExtResource("6_pb2c4")
 
 [node name="stfightbut" type="LinkButton" parent="TextureRect"]
@@ -69,6 +82,7 @@ script = ExtResource("7_ik73x")
 [connection signal="pressed" from="TextureRect/starwarsbut" to="TextureRect/starwarsbut" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/tnmtbut" to="TextureRect/tnmtbut" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/halobut" to="TextureRect/halobut" method="_on_pressed"]
-[connection signal="pressed" from="TextureRect/spideybut" to="TextureRect/spideybut" method="_on_pressed"]
-[connection signal="pressed" from="TextureRect/dbzbut" to="TextureRect/dbzbut" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/mkbtbut" to="TextureRect/mkbtbut" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/venombut" to="TextureRect/venombut" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/gowbut" to="TextureRect/gowbut" method="_on_pressed"]
 [connection signal="pressed" from="TextureRect/stfightbut" to="TextureRect/stfightbut" method="_on_pressed"]
