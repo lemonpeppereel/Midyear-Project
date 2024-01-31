@@ -19,22 +19,22 @@ func _input(_event):
 			get_tree().root.get_node("tmnt").add_child(shredder)
 	
 func _change_world():
+	random.randomize()
 	if Tmntscorecount.tmntscore >= 50:
-		if random.randi_range(0,9) == 1:
+		if random.randi_range(0,6) == 0:
 			get_tree().change_scene_to_file("res://halo.tscn")
-		elif random.randi_range(0,9) == 2:
+		elif random.randi_range(0,6) == 1:
 			get_tree().change_scene_to_file("res://mk.tscn")
-		elif random.randi_range(0,9) == 3:
+		elif random.randi_range(0,6) == 2:
 			get_tree().change_scene_to_file("res://streetfighter.tscn")
-		elif random.randi_range(0,9) == 4:
+		elif random.randi_range(0,6) == 3:
 			get_tree().change_scene_to_file("res://StarWars.tscn")
-		elif random.randi_range(0,9) == 5:
+		elif random.randi_range(0,6) == 4:
 			get_tree().change_scene_to_file("res://batman_game.tscn")
-		elif random.randi_range(0,9) == 6:
+		elif random.randi_range(0,6) == 5:
 			get_tree().change_scene_to_file("res://venom_game.tscn")
-		elif random.randi_range(0,9) == 8:
+		elif random.randi_range(0,6) == 6:
 			get_tree().change_scene_to_file("res://gow.tscn")
-		Tmntscorecount.tmntscore = 0
 		
 
 func _on_back_pressed():
