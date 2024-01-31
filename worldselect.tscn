@@ -1,0 +1,74 @@
+[gd_scene load_steps=8 format=3 uid="uid://d1an36o12hf8g"]
+
+[ext_resource type="Texture2D" uid="uid://qbda5kikn5vb" path="res://images/worldmenubackground.png" id="1_jy0d2"]
+[ext_resource type="Script" path="res://starwarsbut.gd" id="2_epf7m"]
+[ext_resource type="Script" path="res://tnmtbut.gd" id="3_0a437"]
+[ext_resource type="Script" path="res://halobut.gd" id="4_kwd7i"]
+[ext_resource type="Script" path="res://spideybut.gd" id="5_pwuko"]
+[ext_resource type="Script" path="res://dbzbut.gd" id="6_pb2c4"]
+[ext_resource type="Script" path="res://stfightbut.gd" id="7_ik73x"]
+
+[node name="worldselect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 3181.0
+offset_bottom = 1762.0
+scale = Vector2(0.382112, 0.382112)
+texture = ExtResource("1_jy0d2")
+
+[node name="starwarsbut" type="LinkButton" parent="TextureRect"]
+offset_left = 1640.88
+offset_top = 198.895
+offset_right = 2221.88
+offset_bottom = 790.895
+script = ExtResource("2_epf7m")
+
+[node name="tnmtbut" type="LinkButton" parent="TextureRect"]
+offset_left = 2276.88
+offset_top = 159.895
+offset_right = 2928.88
+offset_bottom = 797.895
+script = ExtResource("3_0a437")
+
+[node name="halobut" type="LinkButton" parent="TextureRect"]
+offset_left = 831.88
+offset_top = 1020.89
+offset_right = 1412.88
+offset_bottom = 1656.89
+script = ExtResource("4_kwd7i")
+
+[node name="spideybut" type="LinkButton" parent="TextureRect"]
+offset_left = 1635.88
+offset_top = 1012.89
+offset_right = 2216.88
+offset_bottom = 1656.89
+script = ExtResource("5_pwuko")
+
+[node name="dbzbut" type="LinkButton" parent="TextureRect"]
+offset_left = 2381.88
+offset_top = 1001.89
+offset_right = 2962.88
+offset_bottom = 1666.89
+script = ExtResource("6_pb2c4")
+
+[node name="stfightbut" type="LinkButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 843.0
+offset_top = 225.0
+offset_right = 1424.0
+offset_bottom = 817.0
+script = ExtResource("7_ik73x")
+
+[connection signal="pressed" from="TextureRect/starwarsbut" to="TextureRect/starwarsbut" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/tnmtbut" to="TextureRect/tnmtbut" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/halobut" to="TextureRect/halobut" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/spideybut" to="TextureRect/spideybut" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/dbzbut" to="TextureRect/dbzbut" method="_on_pressed"]
+[connection signal="pressed" from="TextureRect/stfightbut" to="TextureRect/stfightbut" method="_on_pressed"]
