@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://ovwppidem4ym"]
 
-[ext_resource type="Script" path="res://Node2D.gd" id="1_4mp50"]
+[ext_resource type="Script" path="res://Mariogame.gd" id="1_odfxr"]
 [ext_resource type="PackedScene" uid="uid://cwrx1tuuyou7k" path="res://koopatroopa.tscn" id="2_2mb6o"]
 [ext_resource type="Texture2D" uid="uid://dfdsuwgjbmx1t" path="res://images/mariobgtest.jpeg" id="2_sy4ey"]
 [ext_resource type="Script" path="res://marioscorecount.gd" id="3_e23nj"]
@@ -63,7 +63,7 @@ size = Vector2(1120.66, 69.5)
 
 [node name="MarioGame" type="Node2D"]
 scale = Vector2(0.998522, 1)
-script = ExtResource("1_4mp50")
+script = ExtResource("1_odfxr")
 koopa_scene = ExtResource("2_2mb6o")
 
 [node name="marioscorecount" type="CanvasLayer" parent="."]

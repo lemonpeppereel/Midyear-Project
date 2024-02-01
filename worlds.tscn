@@ -22,10 +22,11 @@ texture = ExtResource("1_votkj")
 
 [node name="mariochange" type="LinkButton" parent="TextureRect"]
 layout_mode = 0
-offset_left = 987.0
-offset_top = 482.0
-offset_right = 1854.0
-offset_bottom = 1419.0
+offset_left = 1164.6
+offset_top = 480.721
+offset_right = 2031.6
+offset_bottom = 1417.72
+scale = Vector2(1.3411, 1.08232)
 script = ExtResource("2_v7mea")
 
 [connection signal="pressed" from="TextureRect/mariochange" to="TextureRect/mariochange" method="_on_pressed"]

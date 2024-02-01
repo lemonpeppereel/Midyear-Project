@@ -1,47 +1,73 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwrx1tuuyou7k"]
+[gd_scene load_steps=11 format=3 uid="uid://cwrx1tuuyou7k"]
 
 [ext_resource type="Script" path="res://koopatroopa.gd" id="1_7854f"]
 [ext_resource type="Texture2D" uid="uid://b7w5fqqwxrhq6" path="res://images/koopa-sprite (1).png" id="2_rk8sw"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_77uwu"]
+atlas = ExtResource("2_rk8sw")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eba7y"]
+atlas = ExtResource("2_rk8sw")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdpg2"]
+atlas = ExtResource("2_rk8sw")
+region = Rect2(400, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rh6i"]
+atlas = ExtResource("2_rk8sw")
+region = Rect2(600, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lnmlc"]
+atlas = ExtResource("2_rk8sw")
+region = Rect2(800, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1v18"]
+atlas = ExtResource("2_rk8sw")
+region = Rect2(1000, 0, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dy2r2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77uwu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eba7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdpg2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rh6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lnmlc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1v18")
+}],
+"loop": true,
+"name": &"troopa",
+"speed": 10.0
+}]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_u3naw"]
 radius = 50.0
-
-[sub_resource type="Animation" id="Animation_h43um"]
-resource_name = "koopafall"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("troopa:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wltn1"]
-_data = {
-"koopafall": SubResource("Animation_h43um")
-}
 
 [node name="koopatroopa" type="Area2D"]
 script = ExtResource("1_7854f")
 
+[node name="troopa" type="AnimatedSprite2D" parent="."]
+position = Vector2(61, -64)
+scale = Vector2(0.48, 0.48)
+sprite_frames = SubResource("SpriteFrames_dy2r2")
+animation = &"troopa"
+frame_progress = 0.565247
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(59.9999, -68)
 shape = SubResource("CircleShape2D_u3naw")
-
-[node name="troopa" type="Sprite2D" parent="."]
-position = Vector2(61, -64)
-scale = Vector2(0.48, 0.48)
-texture = ExtResource("2_rk8sw")
-hframes = 6
-
-[node name="kfall" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_wltn1")
-}
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

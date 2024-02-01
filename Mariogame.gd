@@ -1,6 +1,6 @@
 extends Node2D
 
-#class_name MarioGame
+class_name MarioGame
 
 var rng = RandomNumberGenerator.new()
 @export var koopa_scene: PackedScene

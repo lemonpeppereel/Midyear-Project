@@ -1,12 +1,11 @@
 extends Label
 
 class_name ScoreMario
-
 var score = 0
 
 func _ready():
 	self.text = "Score: " + str(score)
-
+	
 func remove_enemy(value):
 	score+=value
 	if score<0:

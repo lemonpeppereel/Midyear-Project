@@ -3,7 +3,7 @@ extends Node2D
 class_name StarWars
 
 func _on_back_pressed():
-	get_tree().change_scene_to_file("res://menu.tscn")
+	get_tree().change_scene_to_file("res://worldselect.tscn")
 	
 var rng = RandomNumberGenerator.new()
 @export var fighter_scene: PackedScene
