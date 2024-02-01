@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dquxufhgub614"]
+
+[ext_resource type="Texture2D" uid="uid://i5gttbfcvdtk" path="res://images/mariowin.png" id="1_hc1o7"]
+[ext_resource type="Script" path="res://LinkButton.gd" id="2_ivl6o"]
+
+[node name="mariowin" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.254003, 0.254003)
+texture = ExtResource("1_hc1o7")
+
+[node name="LinkButton" type="LinkButton" parent="."]
+offset_left = 346.0
+offset_top = 311.0
+offset_right = 386.0
+offset_bottom = 351.0
+scale = Vector2(11.3732, 7.71455)
+script = ExtResource("2_ivl6o")
+
+[connection signal="pressed" from="LinkButton" to="LinkButton" method="_on_pressed"]

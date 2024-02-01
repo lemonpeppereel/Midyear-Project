@@ -12,7 +12,7 @@ func _process(delta):
 		
 func _input(_event):
 		rng.randomize()
-		if rng.randi_range(0,13) == 1:
+		if rng.randi_range(0,12) == 1:
 			var henemy = henemy_scene.instantiate()
 			henemy.position.y = randi_range(0,600)
 			get_tree().root.get_node("halo").add_child(henemy)

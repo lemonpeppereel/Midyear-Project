@@ -69,6 +69,7 @@ koopa_scene = ExtResource("2_2mb6o")
 [node name="marioscorecount" type="CanvasLayer" parent="."]
 
 [node name="score" type="Label" parent="marioscorecount"]
+visible = false
 offset_right = 236.0
 offset_bottom = 55.0
 text = "Score:"

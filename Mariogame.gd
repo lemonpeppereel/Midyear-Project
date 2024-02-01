@@ -23,7 +23,7 @@ func _input(_event):
 			
 func change_worldselec():
 		if Marioscorecount.score >= 50:
-			get_tree().change_scene_to_file("res://worldselect.tscn")
+			get_tree().change_scene_to_file("res://mariowin.tscn")
 
 
 func _on_button_pressed():

@@ -26,6 +26,7 @@ scale = Vector2(0.367972, 0.367972)
 texture = ExtResource("1_jy0d2")
 
 [node name="batbut" type="LinkButton" parent="TextureRect"]
+layout_mode = 0
 offset_left = 158.0
 offset_top = 245.0
 offset_right = 615.0
