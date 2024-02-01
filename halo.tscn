@@ -17,10 +17,10 @@ script = ExtResource("1_s8ewb")
 henemy_scene = ExtResource("2_sxxbw")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 3.0
-offset_top = -10.0
-offset_right = 1168.0
-offset_bottom = 691.0
+offset_left = -5.0
+offset_top = -6.0
+offset_right = 1160.0
+offset_bottom = 695.0
 texture = ExtResource("1_iqpv7")
 expand_mode = 1
 
@@ -46,9 +46,9 @@ volume_db = 0.8
 autoplay = true
 
 [node name="back" type="Button" parent="."]
-offset_left = 919.0
+offset_left = 933.0
 offset_top = 23.0
-offset_right = 1108.0
+offset_right = 1122.0
 offset_bottom = 100.0
 text = "BACK"
 

@@ -1,5 +1,7 @@
 extends Node2D
 
+class_name StarWars
+
 func _on_back_pressed():
 	get_tree().change_scene_to_file("res://menu.tscn")
 	

@@ -43,3 +43,12 @@ venombullet_scene = ExtResource("7_annyr")
 stream = ExtResource("8_u3oh0")
 volume_db = 0.8
 autoplay = true
+
+[node name="Button" type="Button" parent="."]
+offset_left = 945.0
+offset_top = 22.0
+offset_right = 1137.0
+offset_bottom = 99.0
+text = "BACK"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

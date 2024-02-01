@@ -11,6 +11,7 @@ func _physics_process(delta):
 	
 	
 func _on_area_entered(area):
+	if area is gowbullet:
 		area.queue_free()
 		
 		
